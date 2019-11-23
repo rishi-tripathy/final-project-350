@@ -2,7 +2,7 @@ module finalproject_b(score, in, clock, count);
 input clock;
 output[6:0] score;
 input in;
-reg[6:0] count;
+reg[7:0] count;
 reg[31:0] sampler;
 output count;
 

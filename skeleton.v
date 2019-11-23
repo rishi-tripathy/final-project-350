@@ -1,8 +1,8 @@
-module skeleton(resetn, 
+module skeleton(reset, 
 	ps2_clock, ps2_data, 										// ps2 related I/O
 	debug_data_in, debug_addr, leds, 						// extra debugging ports
 	lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon,// LCD info
-	score, curr_time, seg2, seg3, seg4, seg5, seg6, seg7, seg8,		// seven segements
+	seg1, curr_time, score, seg3, seg4, seg5, seg6, seg7, seg8,		// seven segements
 	VGA_CLK,   														//	VGA Clock
 	VGA_HS,															//	VGA H_SYNC
 	VGA_VS,															//	VGA V_SYNC
@@ -15,7 +15,7 @@ module skeleton(resetn,
 	mLeft,
 	mRight,
 	mUp,
-	mDown,
+	mDown, indicator,
 	CLOCK_50);  													// 50 MHz clock
 		
 	////////////////////////	VGA	////////////////////////////
@@ -30,18 +30,18 @@ module skeleton(resetn,
 	input				CLOCK_50, mLeft, mRight, mUp, mDown;
 
 	////////////////////////	PS2	////////////////////////////
-	input 			resetn;
+	input 			reset;
 	inout 			ps2_data, ps2_clock;
 	
 	////////////////////////	LCD and Seven Segment	////////////////////////////
 	output 			   lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon;
 	output 	[7:0] 	leds, lcd_data;
-	output 	[6:0] 	score, curr_time, seg2, seg3, seg4, seg5, seg6, seg7, seg8;
+	output 	[6:0] 	seg1, curr_time, score, seg3, seg4, seg5, seg6, seg7, seg8;
 	output 	[31:0] 	debug_data_in;
 	output   [11:0]   debug_addr;
 	
 	
-	
+	output indicator;
 	
 	
 	wire			 clock;
@@ -71,7 +71,7 @@ module skeleton(resetn,
 	// lcd controller
 //	lcd mylcd(clock, ~resetn, 1'b1, ps2_out, lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon);
 	
-	wire [6:0] score_count;
+	wire [7:0] score_count;
 	
 	//switch from hoop
 	finalproject_b cont(score,inSwitch, clock, score_count);
@@ -99,16 +99,29 @@ module skeleton(resetn,
 	
 	always @(posedge clock)
 		begin
-		timer <= timer + 32'b1;
+			timer <= timer + 32'b1;
+			if (reset == 0) begin
+				curr_time <= 8'b0;
+			end
 			if (timer>32'd100000000 && curr_time < start_time)
 			begin
 				timer <= 32'b0;
 				curr_time <= curr_time + 1;
 			end
 	end
+	
+//	reg 
+//	always @(reset)
+//		begin
+//			curr_time <= 8'b0;
+//	end
+	
+	wire [7:0] score1, score2, score3;
 	//curr_time == 0 acts as enable for leaderboard updates
 	//output top three scores
-	leaderboard l(curr_time, score_count, user_id, score1, score2, score3, id1, id2, id3);
+	leaderboard l(clock, diff, score_count, user_id, score1, score2, score3, id1, id2, id3, indicator);
+	
+	Hexadecimal_To_Seven_Segment yo(score1[3:0], seg1);
 	
 	wire [7:0] start_time, diff;
 	assign start_time = 8'd10;
