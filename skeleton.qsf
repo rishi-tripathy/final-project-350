@@ -51,21 +51,9 @@ set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim-Altera (Verilog)"
 set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
-set_location_assignment PIN_G18 -to seg1[0]
-set_location_assignment PIN_F22 -to seg1[1]
-set_location_assignment PIN_E17 -to seg1[2]
-set_location_assignment PIN_L26 -to seg1[3]
-set_location_assignment PIN_L25 -to seg1[4]
-set_location_assignment PIN_J22 -to seg1[5]
-set_location_assignment PIN_H22 -to seg1[6]
 set_location_assignment PIN_G6 -to ps2_clock
 set_location_assignment PIN_H5 -to ps2_data
-set_location_assignment PIN_M28 -to resetn
-set_location_assignment PIN_L6 -to lcd_blon
 set_location_assignment PIN_M5 -to lcd_data[7]
 set_location_assignment PIN_M3 -to lcd_data[6]
 set_location_assignment PIN_K2 -to lcd_data[5]
@@ -78,13 +66,6 @@ set_location_assignment PIN_L4 -to lcd_en
 set_location_assignment PIN_L5 -to lcd_on
 set_location_assignment PIN_M2 -to lcd_rs
 set_location_assignment PIN_M1 -to lcd_rw
-set_location_assignment PIN_M24 -to seg2[0]
-set_location_assignment PIN_Y22 -to seg2[1]
-set_location_assignment PIN_W21 -to seg2[2]
-set_location_assignment PIN_W22 -to seg2[3]
-set_location_assignment PIN_W25 -to seg2[4]
-set_location_assignment PIN_U24 -to seg2[6]
-set_location_assignment PIN_U23 -to seg2[5]
 set_location_assignment PIN_B10 -to VGA_B[0]
 set_location_assignment PIN_A10 -to VGA_B[1]
 set_location_assignment PIN_C11 -to VGA_B[2]
@@ -165,18 +146,35 @@ set_location_assignment PIN_H21 -to leds[4]
 set_location_assignment PIN_G20 -to leds[5]
 set_location_assignment PIN_G22 -to leds[6]
 set_location_assignment PIN_G21 -to leds[7]
+set_location_assignment PIN_M21 -to mDown
+set_location_assignment PIN_N21 -to mLeft
+set_location_assignment PIN_R24 -to mRight
+set_location_assignment PIN_AB22 -to inSwitch
+set_global_assignment -name VERILOG_FILE xm_pipeline.v
+set_global_assignment -name VERILOG_FILE writeback.v
+set_global_assignment -name VERILOG_FILE regfile.v
+set_global_assignment -name VERILOG_FILE processor.v
+set_global_assignment -name VERILOG_FILE pc_pipeline.v
+set_global_assignment -name VERILOG_FILE mw_pipeline.v
+set_global_assignment -name VERILOG_FILE multiplier.v
+set_global_assignment -name VERILOG_FILE multdiv.v
+set_global_assignment -name VERILOG_FILE memory.v
+set_global_assignment -name VERILOG_FILE fd_pipeline.v
+set_global_assignment -name VERILOG_FILE execute.v
+set_global_assignment -name VERILOG_FILE dx_pipeline.v
+set_global_assignment -name VERILOG_FILE divider.v
+set_global_assignment -name VERILOG_FILE dffe_ref.v
+set_global_assignment -name VERILOG_FILE decoder.v
+set_global_assignment -name VERILOG_FILE alu.v
 set_global_assignment -name MIF_FILE index.mif
 set_global_assignment -name MIF_FILE index_logo.mif
 set_global_assignment -name MIF_FILE img_bars.mif
-set_global_assignment -name MIF_FILE imem.mif
-set_global_assignment -name MIF_FILE dmem.mif
 set_global_assignment -name MIF_FILE img_data_logo.mif
 set_global_assignment -name VERILOG_FILE VGA_Audio_PLL.v
 set_global_assignment -name VERILOG_FILE Reset_Delay.v
 set_global_assignment -name VERILOG_FILE skeleton.v
 set_global_assignment -name VERILOG_FILE PS2_Interface.v
 set_global_assignment -name VERILOG_FILE PS2_Controller.v
-set_global_assignment -name VERILOG_FILE processor.v
 set_global_assignment -name VERILOG_FILE pll.v
 set_global_assignment -name QIP_FILE pll.qip
 set_global_assignment -name SOURCE_FILE pll.cmp
@@ -196,10 +194,29 @@ set_global_assignment -name VERILOG_FILE img_index.v
 set_global_assignment -name VERILOG_FILE img_data.v
 set_global_assignment -name MIF_FILE lab7_img_data.mif
 set_global_assignment -name MIF_FILE lab7_img_index.mif
-set_location_assignment PIN_M21 -to mDown
-set_location_assignment PIN_N21 -to mLeft
-set_location_assignment PIN_R24 -to mRight
-set_location_assignment PIN_M23 -to mUp
 set_global_assignment -name VERILOG_FILE finalproject_b.v
-set_location_assignment PIN_AB22 -to inSwitch
+set_global_assignment -name VERILOG_FILE processor_init.v
+set_global_assignment -name VECTOR_WAVEFORM_FILE output_files/Waveform.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_location_assignment PIN_G18 -to score[0]
+set_location_assignment PIN_F22 -to score[1]
+set_location_assignment PIN_E17 -to score[2]
+set_location_assignment PIN_L26 -to score[3]
+set_location_assignment PIN_L25 -to score[4]
+set_location_assignment PIN_J22 -to score[5]
+set_location_assignment PIN_H22 -to score[6]
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_global_assignment -name VERILOG_FILE leaderboard.v
+set_location_assignment PIN_M23 -to reset
+set_location_assignment PIN_M24 -to seg1[0]
+set_location_assignment PIN_Y22 -to seg1[1]
+set_location_assignment PIN_W21 -to seg1[2]
+set_location_assignment PIN_W22 -to seg1[3]
+set_location_assignment PIN_W25 -to seg1[4]
+set_location_assignment PIN_U23 -to seg1[5]
+set_location_assignment PIN_U24 -to seg1[6]
+set_location_assignment PIN_F15 -to indicator
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

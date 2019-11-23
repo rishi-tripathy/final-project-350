@@ -1,0 +1,26 @@
+module leaderboard(clk, enable, score_count, user_id, score1, score2, score3, id1, id2, id3);
+	input clk;
+	input [7:0] enable, score_count;
+	input [2:0] user_id;
+	output [7:0] score1, score2, score3;
+	output id1, id2, id3;
+	
+	wire en;
+	and a0(en, enable[0], enable[1], enable[2], enable[3], enable[4], enable[5], enable[6], enable[7]);
+	
+	dffe_ref dff0(.d(score_count[0]), .q(score1[0]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1(.d(score_count[1]), .q(score1[1]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2(.d(score_count[2]), .q(score1[2]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff3(.d(score_count[3]), .q(score1[3]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff4(.d(score_count[4]), .q(score1[4]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff5(.d(score_count[5]), .q(score1[5]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff6(.d(score_count[6]), .q(score1[6]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff7(.d(score_count[7]), .q(score1[7]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff8(.d(score_count[8]), .q(score1[8]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff9(.d(score_count[9]), .q(score1[9]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff10(.d(score_count[10]), .q(score1[10]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff11(.d(score_count[11]), .q(score1[11]), .clr(clr), .clk(clk), .en(en));
+	
+	if (score_count
+
+endmodule

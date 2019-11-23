@@ -4,103 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "leds[0]",
+					"name" : "curr_time[0]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_data[0]",
+					"name" : "curr_time[1]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_data[1]",
+					"name" : "curr_time[2]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_data[2]",
+					"name" : "curr_time[3]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_data[3]",
+					"name" : "curr_time[4]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_data[4]",
+					"name" : "curr_time[5]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_data[5]",
+					"name" : "curr_time[6]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_data[6]",
+					"name" : "curr_time[7]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_data[7]",
+					"name" : "score[0]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_en",
+					"name" : "score[1]",
 					"strict" : false
 				},
 				{
-					"name" : "lcd_rs",
+					"name" : "score[2]",
 					"strict" : false
 				},
 				{
-					"name" : "seg1[0]",
+					"name" : "score[3]",
 					"strict" : false
 				},
 				{
-					"name" : "seg1[1]",
+					"name" : "score[4]",
 					"strict" : false
 				},
 				{
-					"name" : "seg1[2]",
+					"name" : "score[5]",
 					"strict" : false
 				},
 				{
-					"name" : "seg1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "seg2[6]",
+					"name" : "score[6]",
 					"strict" : false
 				},
 				{
@@ -212,15 +172,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "ps2_clock",
-					"strict" : false
-				},
-				{
-					"name" : "ps2_data",
-					"strict" : false
-				},
-				{
-					"name" : "inSwitch",
+					"name" : "indicator",
 					"strict" : false
 				},
 				{
@@ -228,7 +180,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "resetn",
+					"name" : "reset",
+					"strict" : false
+				},
+				{
+					"name" : "inSwitch",
 					"strict" : false
 				}
 			]
