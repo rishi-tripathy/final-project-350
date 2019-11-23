@@ -19,7 +19,7 @@ segS = 15,
 segGap = 3;
 
 // SHOT
-input[6:0] score_egment, time_segment;
+input[6:0] score_segment, time_segment;
 
 //
  

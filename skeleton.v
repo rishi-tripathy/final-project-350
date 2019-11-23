@@ -140,7 +140,7 @@ module skeleton(reset,
 								 .g_data(VGA_G),
 								 .r_data(VGA_R),
 								 .time_segment(curr_t),
-								 .score_segment(score)
+								 .score_segment(score),
 								 .mLeft(mLeft),
 								 .mRight(mRight),
 								 .mUp(mUp),
