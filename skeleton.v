@@ -2,7 +2,7 @@ module skeleton(reset,
 	ps2_clock, ps2_data, 										// ps2 related I/O
 	debug_data_in, debug_addr, leds, 						// extra debugging ports
 	lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon,// LCD info
-	seg1, curr_time, score_seg_ones, seg3 , score_seg_tens, seg5, seg6, seg7, seg8,		// seven segements
+	seg1, curr_time, score_seg_ones, score_seg_tens, seg3, seg5, seg6, seg7, seg8,		// seven segements
 	VGA_CLK,   														//	VGA Clock
 	VGA_HS,															//	VGA H_SYNC
 	VGA_VS,															//	VGA V_SYNC
