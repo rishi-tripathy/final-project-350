@@ -41,16 +41,16 @@ module leaderboard(clk, enable, score_count, user_id, score1, score2, score3, id
 	
 	output enOut;
 	
-	assign enOut = en1;
+	assign enOut = score_count[0];
 	
-	dffe_ref dff0a(.d(score_count[0]), .q(score1[0]), .clr(clr), .clk(1), .en(en1));
-	dffe_ref dff1a(.d(score_count[1]), .q(score1[1]), .clr(clr), .clk(1), .en(en1));
-	dffe_ref dff2a(.d(score_count[2]), .q(score1[2]), .clr(clr), .clk(1), .en(en1));
-	dffe_ref dff3a(.d(score_count[3]), .q(score1[3]), .clr(clr), .clk(1), .en(en1));
-	dffe_ref dff4a(.d(score_count[4]), .q(score1[4]), .clr(clr), .clk(1), .en(en1));
-	dffe_ref dff5a(.d(score_count[5]), .q(score1[5]), .clr(clr), .clk(1), .en(en1));
-	dffe_ref dff6a(.d(score_count[6]), .q(score1[6]), .clr(clr), .clk(1), .en(en1));
-	dffe_ref dff7a(.d(score_count[7]), .q(score1[7]), .clr(clr), .clk(1), .en(en1));
+	dffe_ref dff0a(.d(score_count[0]), .q(score1[0]), .clr(1'b0), .clk(clk), .en(en1));
+	dffe_ref dff1a(.d(score_count[1]), .q(score1[1]), .clr(1'b0), .clk(clk), .en(en1));
+	dffe_ref dff2a(.d(score_count[2]), .q(score1[2]), .clr(1'b0), .clk(clk), .en(en1));
+	dffe_ref dff3a(.d(score_count[3]), .q(score1[3]), .clr(1'b0), .clk(clk), .en(en1));
+	dffe_ref dff4a(.d(score_count[4]), .q(score1[4]), .clr(1'b0), .clk(clk), .en(en1));
+	dffe_ref dff5a(.d(score_count[5]), .q(score1[5]), .clr(1'b0), .clk(clk), .en(en1));
+	dffe_ref dff6a(.d(score_count[6]), .q(score1[6]), .clr(1'b0), .clk(clk), .en(en1));
+	dffe_ref dff7a(.d(score_count[7]), .q(score1[7]), .clr(1'b0), .clk(clk), .en(en1));
 	
 	wire [7:0] second;
 	assign second = ctrl2 ? score1 : score_count;

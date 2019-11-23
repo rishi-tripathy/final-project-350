@@ -13775,7 +13775,7 @@ seven_seg_display[6] <= seven_seg_display.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |skeleton|leaderboard:l
-clk => clk.IN16
+clk => clk.IN24
 enable[0] => a0.IN0
 enable[1] => a0.IN1
 enable[2] => a0.IN2
@@ -13822,7 +13822,7 @@ score3[7] <= dffe_ref:dff7c.q
 id1 <= <GND>
 id2 <= <GND>
 id3 <= <GND>
-enOut <= en1.DB_MAX_OUTPUT_PORT_TYPE
+enOut <= score_count[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |skeleton|leaderboard:l|dffe_ref:dff0a

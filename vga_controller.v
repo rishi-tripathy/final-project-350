@@ -6,7 +6,8 @@ module vga_controller(iRST_n,
                       b_data,
                       g_data,
                       r_data,
-							 scoreSegment,
+							 time_segment,
+							 score_segment,
 							 mLeft,
 							 mRight,
 							 mUp,
@@ -18,7 +19,10 @@ segS = 15,
 segGap = 3;
 
 // SHOT
-input[6:0] scoreSegment;
+input[6:0] score_egment, time_segment;
+
+//
+ 
 
 
 	
@@ -116,7 +120,7 @@ end
 
 
 else if (
-			~scoreSegment[0] &&
+			~score_segment[0] &&
 			ADDR/screenW <=(scoreTopLeft/screenW + segS) && //max Y
 			ADDR/screenW >= (scoreTopLeft/screenW) && 		//min Y
 			ADDR%screenW <=(scoreTopLeft%screenW +segL + segGap + segS) &&  //max X
@@ -131,7 +135,7 @@ else if (
 
 //Upper Right (Segment 1)
 
-else if (~scoreSegment[1] &&
+else if (~score_segment[1] &&
 			
 			ADDR/screenW <=(scoreTopLeft/screenW + segS + segGap + segL) && //max Y
 			ADDR/screenW >= (scoreTopLeft/screenW + segS + segGap) &&		//min Y
@@ -146,7 +150,7 @@ else if (~scoreSegment[1] &&
 
 //Lower Right (Segment 2)
 
-else if (~scoreSegment[2] &&
+else if (~score_segment[2] &&
 			
 			ADDR/screenW <=(scoreTopLeft/screenW + segS + segGap + segL + segGap + segL) && //max Y
 			ADDR/screenW >= (scoreTopLeft/screenW + segS + segGap + segL + segGap) &&		//min Y
@@ -161,7 +165,7 @@ else if (~scoreSegment[2] &&
 	
 //Bottom (Segment 3)
 
-else if (~scoreSegment[3] &&
+else if (~score_segment[3] &&
 			
 			ADDR/screenW <=(scoreTopLeft/screenW + segS + segGap + segL + segGap + segL + segGap + segS) && //max Y
 			ADDR/screenW >=(scoreTopLeft/screenW + segS + segGap + segL + segGap + segL + segGap) && //min Y
@@ -176,7 +180,7 @@ else if (~scoreSegment[3] &&
 
 //Lower Left (Segment 4)
 
-else if (~scoreSegment[4] &&
+else if (~score_segment[4] &&
 			
 			ADDR/screenW <=(scoreTopLeft/screenW + segS + segGap + segL + segGap + segL) && //max Y
 			ADDR/screenW >= (scoreTopLeft/screenW + segS + segGap + segL + segGap) &&		//min Y
@@ -191,7 +195,7 @@ else if (~scoreSegment[4] &&
 	
 //Upper Left (Segment 5)
 
-else if (~scoreSegment[5] &&
+else if (~score_segment[5] &&
 			
 			ADDR/screenW <=(scoreTopLeft/screenW + segS + segGap + segL) && //max Y
 			ADDR/screenW >= (scoreTopLeft/screenW + segS + segGap) &&		//min Y
@@ -207,7 +211,7 @@ else if (~scoreSegment[5] &&
 	
 //Center (Segment 6)
 
-else if (~scoreSegment[6] &&
+else if (~score_segment[6] &&
 			
 			ADDR/screenW <=(scoreTopLeft/screenW + segS + segGap + segL + segS) && //max Y
 			ADDR/screenW >= (scoreTopLeft/screenW + segS + segGap + segL) &&		//min Y
