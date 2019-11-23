@@ -1,12 +1,12 @@
-module leaderboard(clk, enable, score_count, user_id, score1, score2, score3, id1, id2, id3, enOut);
-	input clk;
-	input [7:0] enable, score_count;
+module leaderboard(clk, enA, score_count, user_id, score1, score2, score3, id1, id2, id3, enOut);
+	input clk, enA;
+	input [7:0] score_count;
 	input [2:0] user_id;
 	output [7:0] score1, score2, score3;
 	output id1, id2, id3;
 	
-	wire enA;
-	and a0(enA, ~enable[0], ~enable[1], ~enable[2], ~enable[3], ~enable[4], ~enable[5], ~enable[6], ~enable[7]);
+//	wire enA;
+//	and a0(enA, ~enable[0], ~enable[1], ~enable[2], ~enable[3], ~enable[4], ~enable[5], ~enable[6], ~enable[7]);
 	
 	reg ctrl1, ctrl2, ctrl3;
 	
@@ -53,7 +53,7 @@ module leaderboard(clk, enable, score_count, user_id, score1, score2, score3, id
 	dffe_ref dff7a(.d(score_count[7]), .q(score1[7]), .clr(1'b0), .clk(clk), .en(en1));
 	
 	wire [7:0] second;
-	assign second = ctrl2 ? score1 : score_count;
+	assign second = ctrl1 ? score1 : score_count;
 	
 	dffe_ref dff0b(.d(second[0]), .q(score2[0]), .clr(clr), .clk(clk), .en(en2));
 	dffe_ref dff1b(.d(second[1]), .q(score2[1]), .clr(clr), .clk(clk), .en(en2));
@@ -65,7 +65,7 @@ module leaderboard(clk, enable, score_count, user_id, score1, score2, score3, id
 	dffe_ref dff7b(.d(second[7]), .q(score2[7]), .clr(clr), .clk(clk), .en(en2));
 	
 	wire [7:0] third;
-	assign third = ctrl3 ? score2 : score_count;
+	assign third = ctrl2 ? score2 : score_count;
 	
 	dffe_ref dff0c(.d(third[0]), .q(score3[0]), .clr(clr), .clk(clk), .en(en3));
 	dffe_ref dff1c(.d(third[1]), .q(score3[1]), .clr(clr), .clk(clk), .en(en3));

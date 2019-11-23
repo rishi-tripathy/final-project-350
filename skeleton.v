@@ -73,8 +73,12 @@ module skeleton(reset,
 	
 	wire [7:0] score_count;
 	
+	
+	wire score_count_en;
+	and a0(score_count_en, ~diff[0], ~diff[1], ~diff[2], ~diff[3], ~diff[4], ~diff[5], ~diff[6], ~diff[7]);
+	
 	//switch from hoop
-	finalproject_b cont(score,inSwitch, clock, score_count);
+	finalproject_b cont(score,inSwitch, clock, score_count, ~score_count_en, ~reset);
 	
 	
 	// example for sending ps2 data to the first two seven segment displays
@@ -82,7 +86,7 @@ module skeleton(reset,
 	Hexadecimal_To_Seven_Segment hex2(ps2_out[7:4], seg2);
 	
 	// the other seven segment displays are currently set to 0
-	Hexadecimal_To_Seven_Segment hex3(4'b0, seg3);
+	//Hexadecimal_To_Seven_Segment hex3(4'b0, seg3);
 	Hexadecimal_To_Seven_Segment hex4(4'b0, seg4);
 	Hexadecimal_To_Seven_Segment hex5(4'b0, seg5);
 	Hexadecimal_To_Seven_Segment hex6(4'b0, seg6);
@@ -96,17 +100,26 @@ module skeleton(reset,
 	reg[31:0] timer;
 	wire [6:0] curr_t;
 	//reg game_over;
+	reg enA, hold;
 	
 	always @(posedge clock)
 		begin
 			timer <= timer + 32'b1;
 			if (reset == 0) begin
 				curr_time <= 8'b0;
+				hold <= 0;
 			end
 			if (timer>32'd100000000 && curr_time < start_time)
 			begin
 				timer <= 32'b0;
 				curr_time <= curr_time + 1;
+			end
+			if (diff == 'b0 && hold==0) begin
+				enA <= 1;
+				hold <= 1;
+			end
+			if (hold == 1) begin
+				enA <= 0;
 			end
 	end
 	
@@ -118,10 +131,14 @@ module skeleton(reset,
 	
 	wire [7:0] score1, score2, score3;
 	//curr_time == 0 acts as enable for leaderboard updates
+	//wire enA;
+	//and a0(enA, ~diff[0], ~diff[1], ~diff[2], ~diff[3], ~diff[4], ~diff[5], ~diff[6], ~diff[7]);
+	
 	//output top three scores
-	leaderboard l(clock, diff, score_count, user_id, score1, score2, score3, id1, id2, id3, indicator);
+	leaderboard l(clock, enA, score_count, user_id, score1, score2, score3, id1, id2, id3, indicator);
 	
 	Hexadecimal_To_Seven_Segment yo(score1[3:0], seg1);
+	Hexadecimal_To_Seven_Segment yo2(score2[3:0], seg3);
 	
 	wire [7:0] start_time, diff;
 	assign start_time = 8'd10;
