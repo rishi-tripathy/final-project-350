@@ -1,22 +1,21 @@
-module finalproject_b(out, led, in, clock);
+module finalproject_b(score, in, clock, count);
 input clock;
-output[6:0] out;
-output led;
+output[6:0] score;
 input in;
-reg[3:0] count;
-reg[31:0] divider;
+reg[6:0] count;
+reg[31:0] sampler;
+output count;
+
 always @(posedge clock)
 begin
-	divider <= divider + 32'b1;
-	if (divider>32'd20000000)
+	sampler <= sampler + 32'b1;
+	if (sampler>32'd20000000)
 	begin
-		divider <= 32'b0;
-		count <= count + in;//count + in;
-
-		//count <= count + 4'b1;
+		sampler <= 32'b0;
+		count <= count + in;
 	end
 end
-assign led = in;
-Hexadecimal_To_Seven_Segment (count, out);
+
+Hexadecimal_To_Seven_Segment h(count[3:0], score);
 
 endmodule

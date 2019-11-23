@@ -2,7 +2,7 @@ module skeleton(resetn,
 	ps2_clock, ps2_data, 										// ps2 related I/O
 	debug_data_in, debug_addr, leds, 						// extra debugging ports
 	lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon,// LCD info
-	seg1, seg2, seg3, seg4, seg5, seg6, seg7, seg8,		// seven segements
+	score, curr_time, seg2, seg3, seg4, seg5, seg6, seg7, seg8,		// seven segements
 	VGA_CLK,   														//	VGA Clock
 	VGA_HS,															//	VGA H_SYNC
 	VGA_VS,															//	VGA V_SYNC
@@ -36,7 +36,7 @@ module skeleton(resetn,
 	////////////////////////	LCD and Seven Segment	////////////////////////////
 	output 			   lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon;
 	output 	[7:0] 	leds, lcd_data;
-	output 	[6:0] 	seg1, seg2, seg3, seg4, seg5, seg6, seg7, seg8;
+	output 	[6:0] 	score, curr_time, seg2, seg3, seg4, seg5, seg6, seg7, seg8;
 	output 	[31:0] 	debug_data_in;
 	output   [11:0]   debug_addr;
 	
@@ -63,16 +63,19 @@ module skeleton(resetn,
 	//assign clock = inclock;
 	
 	// your processor
-	processor myprocessor(clock, ~resetn, /*ps2_key_pressed, ps2_out, lcd_write_en, lcd_write_data,*/ debug_data_in, debug_addr);
+	processor_init(clock, reset, regA, dataA);
 	
 	// keyboard controller
-	PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
+//	PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
 	
 	// lcd controller
-	lcd mylcd(clock, ~resetn, 1'b1, ps2_out, lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon);
+//	lcd mylcd(clock, ~resetn, 1'b1, ps2_out, lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon);
+	
+	wire [6:0] score_count;
 	
 	//switch from hoop
-	finalproject_b cont(seg1, leds[0], inSwitch, clock);
+	finalproject_b cont(score,inSwitch, clock, score_count);
+	
 	
 	// example for sending ps2 data to the first two seven segment displays
 	//Hexadecimal_To_Seven_Segment hex1(ps2_out[3:0], seg1);
@@ -88,6 +91,29 @@ module skeleton(resetn,
 	
 	// some LEDs that you could use for debugging if you wanted
 	assign leds[7:1] = 7'b0;
+	
+	reg[7:0] curr_time;
+	reg[31:0] timer;
+	wire [6:0] curr_t;
+	//reg game_over;
+	
+	always @(posedge clock)
+		begin
+		timer <= timer + 32'b1;
+			if (timer>32'd100000000 && curr_time < start_time)
+			begin
+				timer <= 32'b0;
+				curr_time <= curr_time + 1;
+			end
+	end
+	//curr_time == 0 acts as enable for leaderboard updates
+	//output top three scores
+	leaderboard l(curr_time, score_count, user_id, score1, score2, score3, id1, id2, id3);
+	
+	wire [7:0] start_time, diff;
+	assign start_time = 8'd10;
+	assign diff = start_time - curr_time;
+	Hexadecimal_To_Seven_Segment h(diff[3:0], curr_t);
 		
 	// VGA
 	Reset_Delay			r0	(.iCLK(CLOCK_50),.oRESET(DLY_RST)	);
@@ -100,7 +126,7 @@ module skeleton(resetn,
 								 .b_data(VGA_B),
 								 .g_data(VGA_G),
 								 .r_data(VGA_R),
-								 .scoreSegment(seg1),
+								 .scoreSegment(curr_t),
 								 .mLeft(mLeft),
 								 .mRight(mRight),
 								 .mUp(mUp),

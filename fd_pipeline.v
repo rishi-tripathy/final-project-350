@@ -1,0 +1,54 @@
+module fd_pipeline(pc, ir, ir_q, pc_q, clk, en, clr);
+	input [31:0] ir;
+	input [11:0] pc;
+	input clr, en, clk;
+	
+	output [31:0] ir_q;
+	output [11:0] pc_q;
+	
+	dffe_ref dff0(.d(pc[0]), .q(pc_q[0]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1(.d(pc[1]), .q(pc_q[1]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2(.d(pc[2]), .q(pc_q[2]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff3(.d(pc[3]), .q(pc_q[3]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff4(.d(pc[4]), .q(pc_q[4]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff5(.d(pc[5]), .q(pc_q[5]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff6(.d(pc[6]), .q(pc_q[6]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff7(.d(pc[7]), .q(pc_q[7]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff8(.d(pc[8]), .q(pc_q[8]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff9(.d(pc[9]), .q(pc_q[9]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff10(.d(pc[10]), .q(pc_q[10]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff11(.d(pc[11]), .q(pc_q[11]), .clr(clr), .clk(clk), .en(en));
+	
+	dffe_ref dff0a(.d(ir[0]), .q(ir_q[0]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a(.d(ir[1]), .q(ir_q[1]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a(.d(ir[2]), .q(ir_q[2]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff3a(.d(ir[3]), .q(ir_q[3]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff4a(.d(ir[4]), .q(ir_q[4]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff5a(.d(ir[5]), .q(ir_q[5]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff6a(.d(ir[6]), .q(ir_q[6]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff7a(.d(ir[7]), .q(ir_q[7]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff8a(.d(ir[8]), .q(ir_q[8]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff9a(.d(ir[9]), .q(ir_q[9]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a0(.d(ir[10]), .q(ir_q[10]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a1(.d(ir[11]), .q(ir_q[11]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a2(.d(ir[12]), .q(ir_q[12]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a3(.d(ir[13]), .q(ir_q[13]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a4(.d(ir[14]), .q(ir_q[14]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a5(.d(ir[15]), .q(ir_q[15]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a6(.d(ir[16]), .q(ir_q[16]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a7(.d(ir[17]), .q(ir_q[17]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a8(.d(ir[18]), .q(ir_q[18]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff1a9(.d(ir[19]), .q(ir_q[19]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a0(.d(ir[20]), .q(ir_q[20]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a1(.d(ir[21]), .q(ir_q[21]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a2(.d(ir[22]), .q(ir_q[22]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a3(.d(ir[23]), .q(ir_q[23]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a4(.d(ir[24]), .q(ir_q[24]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a5(.d(ir[25]), .q(ir_q[25]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a6(.d(ir[26]), .q(ir_q[26]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a7(.d(ir[27]), .q(ir_q[27]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a8(.d(ir[28]), .q(ir_q[28]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff2a9(.d(ir[29]), .q(ir_q[29]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff3a0(.d(ir[30]), .q(ir_q[30]), .clr(clr), .clk(clk), .en(en));
+	dffe_ref dff3a1(.d(ir[31]), .q(ir_q[31]), .clr(clr), .clk(clk), .en(en));
+endmodule
