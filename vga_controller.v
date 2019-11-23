@@ -6,7 +6,8 @@ module vga_controller(iRST_n,
                       b_data,
                       g_data,
                       r_data,
-							 time_segment,
+							 time_segment_ones,
+							 time_segment_tens,
 							 score_segment_ones,
 							 score_segment_tens,
 							 mLeft,
@@ -15,12 +16,12 @@ module vga_controller(iRST_n,
 							 mDown);
 							 
 localparam screenW = 640,
-segL = 80,
-segS = 8,
+segL = 60,
+segS = 6,
 segGap = 3;
 
 // SHOT
-input[6:0] score_segment_ones, score_segment_tens, time_segment;
+input[6:0] score_segment_ones, score_segment_tens, time_segment_ones, time_segment_tens;
 
 //
  
@@ -38,8 +39,10 @@ output [7:0] g_data;
 output [7:0] r_data;                        
 ///////// ////
 reg [18:0] topLeft = 680;
-reg [18:0] scoreTopLeftTens = 9800;
+reg [18:0] scoreTopLeftTens = 9910;
 reg [18:0] scoreTopLeftOnes = 10000;
+reg [18:0] timeTopLeftTens = 137910;
+reg [18:0] timeTopLeftOnes = 138000;
 reg [63:0] counter = 0;                     
 reg [18:0] ADDR;
 reg [23:0] bgr_data;
@@ -116,6 +119,9 @@ end
 //	end
 ///Attempting to insert numbers
 
+
+	
+	
 //Score
 
 	//ONES DIGIT
@@ -291,7 +297,179 @@ end
 			g_data = 8'h00;
 			r_data = 8'h00;
 		end
-	
+
+//Time
+	//ONES DIGIT
+		else if (
+				~time_segment_ones[0] &&
+				ADDR/screenW <=(timeTopLeftOnes/screenW + segS) && //max Y
+				ADDR/screenW >= (timeTopLeftOnes/screenW) && 		//min Y
+				ADDR%screenW <=(timeTopLeftOnes%screenW +segL + segGap + segS) &&  //max X
+				ADDR%screenW >=(timeTopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Right (Segment 1)
+	else if (~time_segment_ones[1] &&
+				ADDR/screenW <=(timeTopLeftOnes/screenW + segS + segGap + segL) && //max Y
+				ADDR/screenW >= (timeTopLeftOnes/screenW + segS + segGap) &&		//min Y
+				ADDR%screenW <=(timeTopLeftOnes%screenW + segL + segGap+ segS) && 						//max X
+				ADDR%screenW >=(timeTopLeftOnes%screenW + segL + segGap)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Right (Segment 2)
+	else if (~time_segment_ones[2] &&
+				ADDR/screenW <=(timeTopLeftOnes/screenW + segS + segGap + segL + segGap + segL) && //max Y
+				ADDR/screenW >= (timeTopLeftOnes/screenW + segS + segGap + segL + segGap) &&		//min Y
+				ADDR%screenW <=(timeTopLeftOnes%screenW + segL + segGap+ segS) && //max X
+				ADDR%screenW >=(timeTopLeftOnes%screenW + segL + segGap)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Bottom (Segment 3)
+	else if (~time_segment_ones[3] &&
+				ADDR/screenW <=(timeTopLeftOnes/screenW + segS + segGap + segL + segGap + segL + segGap + segS) && //max Y
+				ADDR/screenW >=(timeTopLeftOnes/screenW + segS + segGap + segL + segGap + segL + segGap) && //min Y
+				ADDR%screenW <=(timeTopLeftOnes%screenW +segL + segGap + segS) &&  //max X
+				ADDR%screenW >=(timeTopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Left (Segment 4)
+	else if (~time_segment_ones[4] &&
+				ADDR/screenW <=(timeTopLeftOnes/screenW + segS + segGap + segL + segGap + segL) && //max Y
+				ADDR/screenW >= (timeTopLeftOnes/screenW + segS + segGap + segL + segGap) &&		//min Y
+				ADDR%screenW <=(timeTopLeftOnes%screenW + segS) && //max X
+				ADDR%screenW >=(timeTopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Left (Segment 5)
+	else if (~time_segment_ones[5] &&
+				ADDR/screenW <=(timeTopLeftOnes/screenW + segS + segGap + segL) && //max Y
+				ADDR/screenW >= (timeTopLeftOnes/screenW + segS + segGap) &&		//min Y
+				ADDR%screenW <=(timeTopLeftOnes%screenW + segS) && 	//max X
+				ADDR%screenW >=(timeTopLeftOnes%screenW )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Center (Segment 6)
+	else if (~time_segment_ones[6] &&
+				ADDR/screenW <=(timeTopLeftOnes/screenW + segS + segGap + segL + segS) && //max Y
+				ADDR/screenW >= (timeTopLeftOnes/screenW + segS + segGap + segL) &&		//min Y
+				ADDR%screenW <=(timeTopLeftOnes%screenW + segL) && 	//max X
+				ADDR%screenW >=(timeTopLeftOnes%screenW + segS + segGap )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+
+	//TENS DIGIT
+		else if (
+				~time_segment_tens[0] &&
+				ADDR/screenW <=(timeTopLeftTens/screenW + segS) && //max Y
+				ADDR/screenW >= (timeTopLeftTens/screenW) && 		//min Y
+				ADDR%screenW <=(timeTopLeftTens%screenW +segL + segGap + segS) &&  //max X
+				ADDR%screenW >=(timeTopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Right (Segment 1)
+	else if (~time_segment_tens[1] &&
+				ADDR/screenW <=(timeTopLeftTens/screenW + segS + segGap + segL) && //max Y
+				ADDR/screenW >= (timeTopLeftTens/screenW + segS + segGap) &&		//min Y
+				ADDR%screenW <=(timeTopLeftTens%screenW + segL + segGap+ segS) && 						//max X
+				ADDR%screenW >=(timeTopLeftTens%screenW + segL + segGap)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Right (Segment 2)
+	else if (~time_segment_tens[2] &&
+				ADDR/screenW <=(timeTopLeftTens/screenW + segS + segGap + segL + segGap + segL) && //max Y
+				ADDR/screenW >= (timeTopLeftTens/screenW + segS + segGap + segL + segGap) &&		//min Y
+				ADDR%screenW <=(timeTopLeftTens%screenW + segL + segGap+ segS) && //max X
+				ADDR%screenW >=(timeTopLeftTens%screenW + segL + segGap)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Bottom (Segment 3)
+	else if (~time_segment_tens[3] &&
+				ADDR/screenW <=(timeTopLeftTens/screenW + segS + segGap + segL + segGap + segL + segGap + segS) && //max Y
+				ADDR/screenW >=(timeTopLeftTens/screenW + segS + segGap + segL + segGap + segL + segGap) && //min Y
+				ADDR%screenW <=(timeTopLeftTens%screenW +segL + segGap + segS) &&  //max X
+				ADDR%screenW >=(timeTopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Left (Segment 4)
+	else if (~time_segment_tens[4] &&
+				ADDR/screenW <=(timeTopLeftTens/screenW + segS + segGap + segL + segGap + segL) && //max Y
+				ADDR/screenW >= (timeTopLeftTens/screenW + segS + segGap + segL + segGap) &&		//min Y
+				ADDR%screenW <=(timeTopLeftTens%screenW + segS) && //max X
+				ADDR%screenW >=(timeTopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Left (Segment 5)
+	else if (~time_segment_tens[5] &&
+				ADDR/screenW <=(timeTopLeftTens/screenW + segS + segGap + segL) && //max Y
+				ADDR/screenW >= (timeTopLeftTens/screenW + segS + segGap) &&		//min Y
+				ADDR%screenW <=(timeTopLeftTens%screenW + segS) && 	//max X
+				ADDR%screenW >=(timeTopLeftTens%screenW )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Center (Segment 6)
+	else if (~time_segment_tens[6] &&
+				ADDR/screenW <=(timeTopLeftTens/screenW + segS + segGap + segL + segS) && //max Y
+				ADDR/screenW >= (timeTopLeftTens/screenW + segS + segGap + segL) &&		//min Y
+				ADDR%screenW <=(timeTopLeftTens%screenW + segL) && 	//max X
+				ADDR%screenW >=(timeTopLeftTens%screenW + segS + segGap )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
 
 		
 	
