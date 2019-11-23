@@ -2,7 +2,7 @@ module skeleton(reset,
 	ps2_clock, ps2_data, 										// ps2 related I/O
 	debug_data_in, debug_addr, leds, 						// extra debugging ports
 	lcd_data, lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon,// LCD info
-	seg1, curr_time, score, seg3, seg4, seg5, seg6, seg7, seg8,		// seven segements
+	seg1, curr_time, score_seg_ones, seg3 , score_seg_tens, seg5, seg6, seg7, seg8,		// seven segements
 	VGA_CLK,   														//	VGA Clock
 	VGA_HS,															//	VGA H_SYNC
 	VGA_VS,															//	VGA V_SYNC
@@ -36,7 +36,7 @@ module skeleton(reset,
 	////////////////////////	LCD and Seven Segment	////////////////////////////
 	output 			   lcd_rw, lcd_en, lcd_rs, lcd_on, lcd_blon;
 	output 	[7:0] 	leds, lcd_data;
-	output 	[6:0] 	seg1, curr_time, score, seg3, seg4, seg5, seg6, seg7, seg8;
+	output 	[6:0] 	seg1, curr_time, score_seg_ones, score_seg_tens, seg3, seg5, seg6, seg7, seg8;
 	output 	[31:0] 	debug_data_in;
 	output   [11:0]   debug_addr;
 	
@@ -74,7 +74,7 @@ module skeleton(reset,
 	wire [7:0] score_count;
 	
 	//switch from hoop
-	finalproject_b cont(score,inSwitch, clock, score_count);
+	finalproject_b cont(score_seg_ones, score_seg_tens,inSwitch, clock, score_count);
 	
 	
 	// example for sending ps2 data to the first two seven segment displays
@@ -140,7 +140,8 @@ module skeleton(reset,
 								 .g_data(VGA_G),
 								 .r_data(VGA_R),
 								 .time_segment(curr_t),
-								 .score_segment(score),
+								 .score_segment_ones(score_seg_ones),
+								 .score_segment_tens(score_seg_tens),
 								 .mLeft(mLeft),
 								 .mRight(mRight),
 								 .mUp(mUp),

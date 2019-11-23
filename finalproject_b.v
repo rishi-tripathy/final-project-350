@@ -1,6 +1,6 @@
-module finalproject_b(score, in, clock, count);
+module finalproject_b(score_seg_ones, score_seg_tens, in, clock, count);
 input clock;
-output[6:0] score;
+output[6:0] score_seg_ones, score_seg_tens;
 input in;
 reg[7:0] count;
 reg[31:0] sampler;
@@ -16,6 +16,6 @@ begin
 	end
 end
 
-Hexadecimal_To_Seven_Segment h(count[3:0], score);
+Decimal_To_Seven_Segment h(clock, count, score_seg_ones, score_seg_tens);
 
 endmodule

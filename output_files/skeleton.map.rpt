@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Sat Nov 23 13:37:28 2019
+Sat Nov 23 14:40:25 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -30,43 +30,45 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  22. Parameter Settings for User Entity Instance: vga_controller:vga_ins|video_sync_generator:LTM_ins
  23. Parameter Settings for User Entity Instance: vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component
  24. Parameter Settings for User Entity Instance: vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component
- 25. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Div0
- 26. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Mod0
- 27. altpll Parameter Settings by Entity Instance
- 28. altsyncram Parameter Settings by Entity Instance
- 29. Port Connectivity Checks: "VGA_Audio_PLL:p1"
- 30. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff7a"
- 31. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff6a"
- 32. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff5a"
- 33. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff4a"
- 34. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff3a"
- 35. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff2a"
- 36. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff1a"
- 37. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff0a"
- 38. Port Connectivity Checks: "leaderboard:l"
- 39. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex8"
- 40. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex7"
- 41. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex6"
- 42. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex5"
- 43. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex4"
- 44. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex3"
- 45. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex2"
- 46. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|mw_pipeline:mw"
- 47. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|xm_pipeline:xm"
- 48. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|alu:alu1"
- 49. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|execute:x|alu:alu1"
- 50. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|execute:x"
- 51. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|dx_pipeline:dx"
- 52. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|fd_pipeline:fd"
- 53. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|alu:alu0"
- 54. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|pc_pipeline:p"
- 55. Port Connectivity Checks: "processor_init:comb_4|imem:my_imem"
- 56. Port Connectivity Checks: "processor_init:comb_4"
- 57. Port Connectivity Checks: "pll:div"
- 58. Post-Synthesis Netlist Statistics for Top Partition
- 59. Elapsed Time Per Partition
- 60. Analysis & Synthesis Messages
- 61. Analysis & Synthesis Suppressed Messages
+ 25. Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0
+ 26. Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0
+ 27. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Div1
+ 28. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Mod1
+ 29. altpll Parameter Settings by Entity Instance
+ 30. altsyncram Parameter Settings by Entity Instance
+ 31. Port Connectivity Checks: "VGA_Audio_PLL:p1"
+ 32. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff7a"
+ 33. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff6a"
+ 34. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff5a"
+ 35. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff4a"
+ 36. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff3a"
+ 37. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff2a"
+ 38. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff1a"
+ 39. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff0a"
+ 40. Port Connectivity Checks: "leaderboard:l"
+ 41. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex8"
+ 42. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex7"
+ 43. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex6"
+ 44. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex5"
+ 45. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex4"
+ 46. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex3"
+ 47. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex2"
+ 48. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|mw_pipeline:mw"
+ 49. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|xm_pipeline:xm"
+ 50. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|alu:alu1"
+ 51. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|execute:x|alu:alu1"
+ 52. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|execute:x"
+ 53. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|dx_pipeline:dx"
+ 54. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|fd_pipeline:fd"
+ 55. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|alu:alu0"
+ 56. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|pc_pipeline:p"
+ 57. Port Connectivity Checks: "processor_init:comb_4|imem:my_imem"
+ 58. Port Connectivity Checks: "processor_init:comb_4"
+ 59. Port Connectivity Checks: "pll:div"
+ 60. Post-Synthesis Netlist Statistics for Top Partition
+ 61. Elapsed Time Per Partition
+ 62. Analysis & Synthesis Messages
+ 63. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -92,15 +94,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 23 13:37:28 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 23 14:40:25 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; skeleton                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,174                                       ;
-;     Total combinational functions  ; 1,117                                       ;
-;     Dedicated logic registers      ; 289                                         ;
-; Total registers                    ; 289                                         ;
+; Total logic elements               ; 1,330                                       ;
+;     Total combinational functions  ; 1,272                                       ;
+;     Dedicated logic registers      ; 297                                         ;
+; Total registers                    ; 297                                         ;
 ; Total pins                         ; 168                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,463,744                                   ;
@@ -251,6 +253,7 @@ refer to the applicable agreement for further details.
 ; finalproject_b.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/rt125/Downloads/final-project-350/finalproject_b.v                  ;         ;
 ; processor_init.v                 ; yes             ; User Verilog HDL File                  ; C:/Users/rt125/Downloads/final-project-350/processor_init.v                  ;         ;
 ; leaderboard.v                    ; yes             ; User Verilog HDL File                  ; C:/Users/rt125/Downloads/final-project-350/leaderboard.v                     ;         ;
+; Decimal_To_Seven_Segment.v       ; yes             ; User Verilog HDL File                  ; C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v        ;         ;
 ; altpll.tdf                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
 ; aglobal171.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/aglobal171.inc        ;         ;
 ; stratix_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
@@ -276,11 +279,15 @@ refer to the applicable agreement for further details.
 ; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
+; db/lpm_divide_m9m.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/lpm_divide_m9m.tdf             ;         ;
+; db/sign_div_unsign_bkh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/sign_div_unsign_bkh.tdf        ;         ;
+; db/alt_u_div_a4f.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/alt_u_div_a4f.tdf              ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/add_sub_7pc.tdf                ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/add_sub_8pc.tdf                ;         ;
+; db/lpm_divide_jhm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/lpm_divide_jhm.tdf             ;         ;
 ; db/lpm_divide_ikm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/lpm_divide_ikm.tdf             ;         ;
 ; db/sign_div_unsign_anh.tdf       ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/sign_div_unsign_anh.tdf        ;         ;
 ; db/alt_u_div_8af.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/alt_u_div_8af.tdf              ;         ;
-; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/add_sub_7pc.tdf                ;         ;
-; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/add_sub_8pc.tdf                ;         ;
 ; db/lpm_divide_lcm.tdf            ; yes             ; Auto-Generated Megafunction            ; C:/Users/rt125/Downloads/final-project-350/db/lpm_divide_lcm.tdf             ;         ;
 +----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 
@@ -290,20 +297,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------------------------------------------+
 ; Resource                                    ; Usage                                          ;
 +---------------------------------------------+------------------------------------------------+
-; Estimated Total logic elements              ; 1,174                                          ;
+; Estimated Total logic elements              ; 1,330                                          ;
 ;                                             ;                                                ;
-; Total combinational functions               ; 1117                                           ;
+; Total combinational functions               ; 1272                                           ;
 ; Logic element usage by number of LUT inputs ;                                                ;
-;     -- 4 input functions                    ; 479                                            ;
-;     -- 3 input functions                    ; 143                                            ;
-;     -- <=2 input functions                  ; 495                                            ;
+;     -- 4 input functions                    ; 515                                            ;
+;     -- 3 input functions                    ; 198                                            ;
+;     -- <=2 input functions                  ; 559                                            ;
 ;                                             ;                                                ;
 ; Logic elements by mode                      ;                                                ;
-;     -- normal mode                          ; 817                                            ;
-;     -- arithmetic mode                      ; 300                                            ;
+;     -- normal mode                          ; 934                                            ;
+;     -- arithmetic mode                      ; 338                                            ;
 ;                                             ;                                                ;
-; Total registers                             ; 289                                            ;
-;     -- Dedicated logic registers            ; 289                                            ;
+; Total registers                             ; 297                                            ;
+;     -- Dedicated logic registers            ; 297                                            ;
 ;     -- I/O registers                        ; 0                                              ;
 ;                                             ;                                                ;
 ; I/O pins                                    ; 168                                            ;
@@ -316,67 +323,75 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                ;
 ; Maximum fan-out node                        ; VGA_Audio_PLL:p1|altpll:altpll_component|_clk0 ;
 ; Maximum fan-out                             ; 494                                            ;
-; Total fan-out                               ; 9130                                           ;
-; Average fan-out                             ; 4.40                                           ;
+; Total fan-out                               ; 9567                                           ;
+; Average fan-out                             ; 4.28                                           ;
 +---------------------------------------------+------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                   ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                           ; Entity Name                  ; Library Name ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |skeleton                                    ; 1117 (70)           ; 289 (40)                  ; 2463744     ; 0            ; 0       ; 0         ; 168  ; 0            ; |skeleton                                                                                                                                     ; skeleton                     ; work         ;
-;    |Hexadecimal_To_Seven_Segment:yo|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Hexadecimal_To_Seven_Segment:yo                                                                                                     ; Hexadecimal_To_Seven_Segment ; work         ;
-;    |Reset_Delay:r0|                          ; 27 (27)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Reset_Delay:r0                                                                                                                      ; Reset_Delay                  ; work         ;
-;    |VGA_Audio_PLL:p1|                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|VGA_Audio_PLL:p1                                                                                                                    ; VGA_Audio_PLL                ; work         ;
-;       |altpll:altpll_component|              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|VGA_Audio_PLL:p1|altpll:altpll_component                                                                                            ; altpll                       ; work         ;
-;    |finalproject_b:cont|                     ; 60 (51)             ; 40 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont                                                                                                                 ; finalproject_b               ; work         ;
-;       |Hexadecimal_To_Seven_Segment:h|       ; 9 (9)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Hexadecimal_To_Seven_Segment:h                                                                                  ; Hexadecimal_To_Seven_Segment ; work         ;
-;    |leaderboard:l|                           ; 29 (29)             ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l                                                                                                                       ; leaderboard                  ; work         ;
-;       |dffe_ref:dff0a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff0a                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff0b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff0b                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff0c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff0c                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff1a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff1a                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff1b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff1b                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff1c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff1c                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff2a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff2a                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff2b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff2b                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff2c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff2c                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff3a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff3a                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff3b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff3b                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff3c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff3c                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff4a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff4a                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff4b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff4b                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff4c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff4c                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff5a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff5a                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff5b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff5b                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff5c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff5c                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff6a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff6a                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff6b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff6b                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff6c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff6c                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff7a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff7a                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff7b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff7b                                                                                                        ; dffe_ref                     ; work         ;
-;       |dffe_ref:dff7c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff7c                                                                                                        ; dffe_ref                     ; work         ;
-;    |vga_controller:vga_ins|                  ; 924 (177)           ; 164 (134)                 ; 2463744     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins                                                                                                              ; vga_controller               ; work         ;
-;       |img_data:img_data_inst|               ; 278 (0)             ; 6 (0)                     ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst                                                                                       ; img_data                     ; work         ;
-;          |altsyncram:altsyncram_component|   ; 278 (0)             ; 6 (0)                     ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component                                                       ; altsyncram                   ; work         ;
-;             |altsyncram_ekc1:auto_generated| ; 278 (0)             ; 6 (6)                     ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated                        ; altsyncram_ekc1              ; work         ;
-;                |decode_aaa:rden_decode|      ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated|decode_aaa:rden_decode ; decode_aaa                   ; work         ;
-;                |mux_1pb:mux2|                ; 234 (234)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated|mux_1pb:mux2           ; mux_1pb                      ; work         ;
-;       |img_index:img_index_inst|             ; 0 (0)               ; 0 (0)                     ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_index:img_index_inst                                                                                     ; img_index                    ; work         ;
-;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component                                                     ; altsyncram                   ; work         ;
-;             |altsyncram_pjc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_pjc1:auto_generated                      ; altsyncram_pjc1              ; work         ;
-;       |lpm_divide:Div0|                      ; 220 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div0                                                                                              ; lpm_divide                   ; work         ;
-;          |lpm_divide_ikm:auto_generated|     ; 220 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div0|lpm_divide_ikm:auto_generated                                                                ; lpm_divide_ikm               ; work         ;
-;             |sign_div_unsign_anh:divider|    ; 220 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div0|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider                                    ; sign_div_unsign_anh          ; work         ;
-;                |alt_u_div_8af:divider|       ; 220 (220)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div0|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider              ; alt_u_div_8af                ; work         ;
-;       |lpm_divide:Mod0|                      ; 205 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod0                                                                                              ; lpm_divide                   ; work         ;
-;          |lpm_divide_lcm:auto_generated|     ; 205 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod0|lpm_divide_lcm:auto_generated                                                                ; lpm_divide_lcm               ; work         ;
-;             |sign_div_unsign_anh:divider|    ; 205 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                                    ; sign_div_unsign_anh          ; work         ;
-;                |alt_u_div_8af:divider|       ; 205 (205)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod0|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider              ; alt_u_div_8af                ; work         ;
-;       |video_sync_generator:LTM_ins|         ; 44 (44)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|video_sync_generator:LTM_ins                                                                                 ; video_sync_generator         ; work         ;
-+----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                              ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                      ; Entity Name                  ; Library Name ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
+; |skeleton                                    ; 1272 (70)           ; 297 (40)                  ; 2463744     ; 0            ; 0       ; 0         ; 168  ; 0            ; |skeleton                                                                                                                                                ; skeleton                     ; work         ;
+;    |Hexadecimal_To_Seven_Segment:yo|         ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Hexadecimal_To_Seven_Segment:yo                                                                                                                ; Hexadecimal_To_Seven_Segment ; work         ;
+;    |Reset_Delay:r0|                          ; 27 (27)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Reset_Delay:r0                                                                                                                                 ; Reset_Delay                  ; work         ;
+;    |VGA_Audio_PLL:p1|                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|VGA_Audio_PLL:p1                                                                                                                               ; VGA_Audio_PLL                ; work         ;
+;       |altpll:altpll_component|              ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|VGA_Audio_PLL:p1|altpll:altpll_component                                                                                                       ; altpll                       ; work         ;
+;    |finalproject_b:cont|                     ; 185 (51)            ; 48 (40)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont                                                                                                                            ; finalproject_b               ; work         ;
+;       |Decimal_To_Seven_Segment:h|           ; 134 (24)            ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h                                                                                                 ; Decimal_To_Seven_Segment     ; work         ;
+;          |lpm_divide:Div0|                   ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0                                                                                 ; lpm_divide                   ; work         ;
+;             |lpm_divide_jhm:auto_generated|  ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm               ; work         ;
+;                |sign_div_unsign_bkh:divider| ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh          ; work         ;
+;                   |alt_u_div_a4f:divider|    ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f                ; work         ;
+;          |lpm_divide:Mod0|                   ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0                                                                                 ; lpm_divide                   ; work         ;
+;             |lpm_divide_m9m:auto_generated|  ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m               ; work         ;
+;                |sign_div_unsign_bkh:divider| ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh          ; work         ;
+;                   |alt_u_div_a4f:divider|    ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f                ; work         ;
+;    |leaderboard:l|                           ; 29 (29)             ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l                                                                                                                                  ; leaderboard                  ; work         ;
+;       |dffe_ref:dff0a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff0a                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff0b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff0b                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff0c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff0c                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff1a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff1a                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff1b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff1b                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff1c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff1c                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff2a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff2a                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff2b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff2b                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff2c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff2c                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff3a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff3a                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff3b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff3b                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff3c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff3c                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff4a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff4a                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff4b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff4b                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff4c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff4c                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff5a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff5a                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff5b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff5b                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff5c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff5c                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff6a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff6a                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff6b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff6b                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff6c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff6c                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff7a|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff7a                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff7b|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff7b                                                                                                                   ; dffe_ref                     ; work         ;
+;       |dffe_ref:dff7c|                       ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff7c                                                                                                                   ; dffe_ref                     ; work         ;
+;    |vga_controller:vga_ins|                  ; 954 (204)           ; 164 (134)                 ; 2463744     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins                                                                                                                         ; vga_controller               ; work         ;
+;       |img_data:img_data_inst|               ; 278 (0)             ; 6 (0)                     ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst                                                                                                  ; img_data                     ; work         ;
+;          |altsyncram:altsyncram_component|   ; 278 (0)             ; 6 (0)                     ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component                                                                  ; altsyncram                   ; work         ;
+;             |altsyncram_ekc1:auto_generated| ; 278 (0)             ; 6 (6)                     ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated                                   ; altsyncram_ekc1              ; work         ;
+;                |decode_aaa:rden_decode|      ; 44 (44)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated|decode_aaa:rden_decode            ; decode_aaa                   ; work         ;
+;                |mux_1pb:mux2|                ; 234 (234)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated|mux_1pb:mux2                      ; mux_1pb                      ; work         ;
+;       |img_index:img_index_inst|             ; 0 (0)               ; 0 (0)                     ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_index:img_index_inst                                                                                                ; img_index                    ; work         ;
+;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component                                                                ; altsyncram                   ; work         ;
+;             |altsyncram_pjc1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_pjc1:auto_generated                                 ; altsyncram_pjc1              ; work         ;
+;       |lpm_divide:Div1|                      ; 220 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div1                                                                                                         ; lpm_divide                   ; work         ;
+;          |lpm_divide_ikm:auto_generated|     ; 220 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div1|lpm_divide_ikm:auto_generated                                                                           ; lpm_divide_ikm               ; work         ;
+;             |sign_div_unsign_anh:divider|    ; 220 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div1|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider                                               ; sign_div_unsign_anh          ; work         ;
+;                |alt_u_div_8af:divider|       ; 220 (220)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div1|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                         ; alt_u_div_8af                ; work         ;
+;       |lpm_divide:Mod1|                      ; 208 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod1                                                                                                         ; lpm_divide                   ; work         ;
+;          |lpm_divide_lcm:auto_generated|     ; 208 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod1|lpm_divide_lcm:auto_generated                                                                           ; lpm_divide_lcm               ; work         ;
+;             |sign_div_unsign_anh:divider|    ; 208 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod1|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                                               ; sign_div_unsign_anh          ; work         ;
+;                |alt_u_div_8af:divider|       ; 208 (208)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod1|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                         ; alt_u_div_8af                ; work         ;
+;       |video_sync_generator:LTM_ins|         ; 44 (44)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|video_sync_generator:LTM_ins                                                                                            ; video_sync_generator         ; work         ;
++----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -2114,7 +2129,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 289   ;
+; Total registers                              ; 297   ;
 ; Number of registers using Synchronous Clear  ; 147   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 40    ;
@@ -2129,8 +2144,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|curr_time[1]~reg0                ;
-; 8:1                ; 24 bits   ; 120 LEs       ; 24 LEs               ; 96 LEs                 ; Yes        ; |skeleton|vga_controller:vga_ins|b_data[3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |skeleton|curr_time[5]~reg0                ;
+; 15:1               ; 24 bits   ; 240 LEs       ; 24 LEs               ; 216 LEs                ; Yes        ; |skeleton|vga_controller:vga_ins|g_data[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
 
 
@@ -3179,8 +3194,54 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Div0 ;
+; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Div1 ;
 +------------------------+----------------+-----------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                          ;
 +------------------------+----------------+-----------------------------------------------+
@@ -3203,7 +3264,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Mod0 ;
+; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Mod1 ;
 +------------------------+----------------+-----------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                          ;
 +------------------------+----------------+-----------------------------------------------+
@@ -3436,13 +3497,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+-------------------------------+
 
 
-+---------------------------------------------------------------+
-; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex4" ;
-+------------+-------+----------+-------------------------------+
-; Port       ; Type  ; Severity ; Details                       ;
-+------------+-------+----------+-------------------------------+
-; hex_number ; Input ; Info     ; Stuck at GND                  ;
-+------------+-------+----------+-------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex4"                                                                                                                ;
++-------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                                                                              ;
++-------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
+; hex_number        ; Input  ; Info     ; Stuck at GND                                                                                                                         ;
+; seven_seg_display ; Output ; Warning  ; Output or bidir port (7 bits) is wider than the port expression (1 bits) it drives; bit(s) "seven_seg_display[6..1]" have no fanouts ;
+; seven_seg_display ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                  ;
++-------------------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -3601,29 +3664,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 168                         ;
-; cycloneiii_ff         ; 289                         ;
+; cycloneiii_ff         ; 297                         ;
 ;     CLR               ; 11                          ;
 ;     CLR SCLR          ; 19                          ;
 ;     ENA               ; 78                          ;
 ;     ENA CLR           ; 10                          ;
 ;     SCLR              ; 128                         ;
-;     plain             ; 43                          ;
+;     plain             ; 51                          ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 1121                        ;
-;     arith             ; 300                         ;
-;         2 data inputs ; 204                         ;
-;         3 data inputs ; 96                          ;
-;     normal            ; 821                         ;
-;         0 data inputs ; 22                          ;
-;         1 data inputs ; 12                          ;
-;         2 data inputs ; 261                         ;
-;         3 data inputs ; 47                          ;
-;         4 data inputs ; 479                         ;
+; cycloneiii_lcell_comb ; 1277                        ;
+;     arith             ; 338                         ;
+;         2 data inputs ; 210                         ;
+;         3 data inputs ; 128                         ;
+;     normal            ; 939                         ;
+;         0 data inputs ; 32                          ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 306                         ;
+;         3 data inputs ; 70                          ;
+;         4 data inputs ; 515                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 328                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 29.90                       ;
-; Average LUT depth     ; 10.74                       ;
+; Average LUT depth     ; 11.11                       ;
 +-----------------------+-----------------------------+
 
 
@@ -3642,7 +3705,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Nov 23 13:37:12 2019
+    Info: Processing started: Sat Nov 23 14:40:08 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -3716,6 +3779,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file process
     Info (12023): Found entity 1: processor_init File: C:/Users/rt125/Downloads/final-project-350/processor_init.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file leaderboard.v
     Info (12023): Found entity 1: leaderboard File: C:/Users/rt125/Downloads/final-project-350/leaderboard.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decimal_to_seven_segment.v
+    Info (12023): Found entity 1: Decimal_To_Seven_Segment File: C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v Line: 9
 Warning (10236): Verilog HDL Implicit Net warning at processor.v(130): created implicit net for "ignore" File: C:/Users/rt125/Downloads/final-project-350/processor.v Line: 130
 Warning (10236): Verilog HDL Implicit Net warning at processor.v(130): created implicit net for "ignore1" File: C:/Users/rt125/Downloads/final-project-350/processor.v Line: 130
 Warning (10236): Verilog HDL Implicit Net warning at processor.v(130): created implicit net for "ignore2" File: C:/Users/rt125/Downloads/final-project-350/processor.v Line: 130
@@ -3727,6 +3792,7 @@ Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(59): created imp
 Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(66): created implicit net for "regA" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 66
 Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(66): created implicit net for "dataA" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 66
 Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(82): created implicit net for "seg2" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 82
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(86): created implicit net for "seg4" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 86
 Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(122): created implicit net for "user_id" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 122
 Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(122): created implicit net for "id1" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 122
 Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(122): created implicit net for "id2" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 122
@@ -3877,7 +3943,10 @@ Info (12128): Elaborating entity "memory" for hierarchy "processor_init:comb_4|p
 Info (12128): Elaborating entity "mw_pipeline" for hierarchy "processor_init:comb_4|processor:my_processor|mw_pipeline:mw" File: C:/Users/rt125/Downloads/final-project-350/processor.v Line: 330
 Info (12128): Elaborating entity "writeback" for hierarchy "processor_init:comb_4|processor:my_processor|writeback:w" File: C:/Users/rt125/Downloads/final-project-350/processor.v Line: 335
 Info (12128): Elaborating entity "finalproject_b" for hierarchy "finalproject_b:cont" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 77
-Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "finalproject_b:cont|Hexadecimal_To_Seven_Segment:h" File: C:/Users/rt125/Downloads/final-project-350/finalproject_b.v Line: 19
+Info (12128): Elaborating entity "Decimal_To_Seven_Segment" for hierarchy "finalproject_b:cont|Decimal_To_Seven_Segment:h" File: C:/Users/rt125/Downloads/final-project-350/finalproject_b.v Line: 19
+Warning (10230): Verilog HDL assignment warning at Decimal_To_Seven_Segment.v(37): truncated value with size 8 to match size of target (4) File: C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v Line: 37
+Warning (10230): Verilog HDL assignment warning at Decimal_To_Seven_Segment.v(38): truncated value with size 8 to match size of target (4) File: C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v Line: 38
+Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "Hexadecimal_To_Seven_Segment:hex2" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 82
 Info (12128): Elaborating entity "leaderboard" for hierarchy "leaderboard:l" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 122
 Warning (10235): Verilog HDL Always Construct warning at leaderboard.v(15): variable "score_count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rt125/Downloads/final-project-350/leaderboard.v Line: 15
 Warning (10235): Verilog HDL Always Construct warning at leaderboard.v(15): variable "score1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/rt125/Downloads/final-project-350/leaderboard.v Line: 15
@@ -3962,16 +4031,16 @@ Info (12133): Instantiated megafunction "VGA_Audio_PLL:p1|altpll:altpll_componen
     Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga_ins" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 147
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(65): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 65
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(95): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 95
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(98): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 98
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(101): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 101
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(104): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 104
-Info (12128): Elaborating entity "video_sync_generator" for hierarchy "vga_controller:vga_ins|video_sync_generator:LTM_ins" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 55
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga_ins" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 148
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(67): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 67
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(97): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 97
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(100): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 100
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(103): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 103
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(106): truncated value with size 32 to match size of target (19) File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 106
+Info (12128): Elaborating entity "video_sync_generator" for hierarchy "vga_controller:vga_ins|video_sync_generator:LTM_ins" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 57
 Warning (10230): Verilog HDL assignment warning at video_sync_generator.v(77): truncated value with size 32 to match size of target (10) File: C:/Users/rt125/Downloads/final-project-350/video_sync_generator.v Line: 77
 Warning (10230): Verilog HDL assignment warning at video_sync_generator.v(80): truncated value with size 32 to match size of target (11) File: C:/Users/rt125/Downloads/final-project-350/video_sync_generator.v Line: 80
-Info (12128): Elaborating entity "img_data" for hierarchy "vga_controller:vga_ins|img_data:img_data_inst" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 74
+Info (12128): Elaborating entity "img_data" for hierarchy "vga_controller:vga_ins|img_data:img_data_inst" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 76
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component" File: C:/Users/rt125/Downloads/final-project-350/img_data.v Line: 81
 Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component" File: C:/Users/rt125/Downloads/final-project-350/img_data.v Line: 81
 Info (12133): Instantiated megafunction "vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/rt125/Downloads/final-project-350/img_data.v Line: 81
@@ -3999,7 +4068,7 @@ Info (12128): Elaborating entity "decode_aaa" for hierarchy "vga_controller:vga_
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_1pb.tdf
     Info (12023): Found entity 1: mux_1pb File: C:/Users/rt125/Downloads/final-project-350/db/mux_1pb.tdf Line: 22
 Info (12128): Elaborating entity "mux_1pb" for hierarchy "vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated|mux_1pb:mux2" File: C:/Users/rt125/Downloads/final-project-350/db/altsyncram_ekc1.tdf Line: 40
-Info (12128): Elaborating entity "img_index" for hierarchy "vga_controller:vga_ins|img_index:img_index_inst" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 84
+Info (12128): Elaborating entity "img_index" for hierarchy "vga_controller:vga_ins|img_index:img_index_inst" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 86
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component" File: C:/Users/rt125/Downloads/final-project-350/img_index.v Line: 82
 Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component" File: C:/Users/rt125/Downloads/final-project-350/img_index.v Line: 82
 Info (12133): Instantiated megafunction "vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/rt125/Downloads/final-project-350/img_index.v Line: 82
@@ -4091,11 +4160,37 @@ Warning (14284): Synthesized away the following node(s):
         Warning (14320): Synthesized away node "processor_init:comb_4|imem:my_imem|altsyncram:altsyncram_component|altsyncram_hla1:auto_generated|q_a[31]" File: C:/Users/rt125/Downloads/final-project-350/db/altsyncram_hla1.tdf Line: 686
     Warning (14285): Synthesized away the following PLL node(s):
         Warning (14320): Synthesized away node "pll:div|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0]" File: C:/Users/rt125/Downloads/final-project-350/db/pll_altpll.v Line: 77
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|Div0" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 217
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|Mod0" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 219
-Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|lpm_divide:Div0" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 217
-Info (12133): Instantiated megafunction "vga_controller:vga_ins|lpm_divide:Div0" with the following parameter: File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 217
+Info (278001): Inferred 4 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:h|Mod0" File: C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:h|Div0" File: C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|Div1" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 285
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|Mod1" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 287
+Info (12130): Elaborated megafunction instantiation "finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0" File: C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v Line: 37
+Info (12133): Instantiated megafunction "finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0" with the following parameter: File: C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v Line: 37
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_m9m.tdf
+    Info (12023): Found entity 1: lpm_divide_m9m File: C:/Users/rt125/Downloads/final-project-350/db/lpm_divide_m9m.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_bkh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_bkh File: C:/Users/rt125/Downloads/final-project-350/db/sign_div_unsign_bkh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_a4f.tdf
+    Info (12023): Found entity 1: alt_u_div_a4f File: C:/Users/rt125/Downloads/final-project-350/db/alt_u_div_a4f.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/rt125/Downloads/final-project-350/db/add_sub_7pc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/rt125/Downloads/final-project-350/db/add_sub_8pc.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0" File: C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v Line: 38
+Info (12133): Instantiated megafunction "finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0" with the following parameter: File: C:/Users/rt125/Downloads/final-project-350/Decimal_To_Seven_Segment.v Line: 38
+    Info (12134): Parameter "LPM_WIDTHN" = "8"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
+    Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/rt125/Downloads/final-project-350/db/lpm_divide_jhm.tdf Line: 24
+Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|lpm_divide:Div1" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 285
+Info (12133): Instantiated megafunction "vga_controller:vga_ins|lpm_divide:Div1" with the following parameter: File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 285
     Info (12134): Parameter "LPM_WIDTHN" = "19"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -4106,19 +4201,15 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_anh File: C:/Users/rt125/Downloads/final-project-350/db/sign_div_unsign_anh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_8af.tdf
     Info (12023): Found entity 1: alt_u_div_8af File: C:/Users/rt125/Downloads/final-project-350/db/alt_u_div_8af.tdf Line: 26
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
-    Info (12023): Found entity 1: add_sub_7pc File: C:/Users/rt125/Downloads/final-project-350/db/add_sub_7pc.tdf Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
-    Info (12023): Found entity 1: add_sub_8pc File: C:/Users/rt125/Downloads/final-project-350/db/add_sub_8pc.tdf Line: 22
-Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|lpm_divide:Mod0" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 219
-Info (12133): Instantiated megafunction "vga_controller:vga_ins|lpm_divide:Mod0" with the following parameter: File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 219
+Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|lpm_divide:Mod1" File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 287
+Info (12133): Instantiated megafunction "vga_controller:vga_ins|lpm_divide:Mod1" with the following parameter: File: C:/Users/rt125/Downloads/final-project-350/vga_controller.v Line: 287
     Info (12134): Parameter "LPM_WIDTHN" = "19"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_lcm.tdf
     Info (12023): Found entity 1: lpm_divide_lcm File: C:/Users/rt125/Downloads/final-project-350/db/lpm_divide_lcm.tdf Line: 24
-Warning (12241): 10 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 11 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "ps2_clock" has no driver File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 34
     Warning (13040): bidirectional pin "ps2_data" has no driver File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 34
@@ -4195,13 +4286,6 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg3[4]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
     Warning (13410): Pin "seg3[5]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
     Warning (13410): Pin "seg3[6]" is stuck at VCC File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
-    Warning (13410): Pin "seg4[0]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
-    Warning (13410): Pin "seg4[1]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
-    Warning (13410): Pin "seg4[2]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
-    Warning (13410): Pin "seg4[3]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
-    Warning (13410): Pin "seg4[4]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
-    Warning (13410): Pin "seg4[5]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
-    Warning (13410): Pin "seg4[6]" is stuck at VCC File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
     Warning (13410): Pin "seg5[0]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
     Warning (13410): Pin "seg5[1]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
     Warning (13410): Pin "seg5[2]" is stuck at GND File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 39
@@ -4243,18 +4327,18 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "mRight" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 30
     Warning (15610): No output dependent on input pin "mUp" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 30
     Warning (15610): No output dependent on input pin "mDown" File: C:/Users/rt125/Downloads/final-project-350/skeleton.v Line: 30
-Info (21057): Implemented 1672 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1828 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 159 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1175 logic cells
+    Info (21061): Implemented 1331 logic cells
     Info (21064): Implemented 328 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 255 warnings
-    Info: Peak virtual memory: 4842 megabytes
-    Info: Processing ended: Sat Nov 23 13:37:28 2019
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:25
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 251 warnings
+    Info: Peak virtual memory: 4846 megabytes
+    Info: Processing ended: Sat Nov 23 14:40:25 2019
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+
