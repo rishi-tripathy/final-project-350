@@ -13,7 +13,7 @@ begin
 		count <= 8'b0;
 	end
 	sampler <= sampler + 32'b1;
-	if (sampler>32'd20000000 && enA == 1)
+	if (sampler>32'd2000000 && enA == 1)
 	begin
 		sampler <= 32'b0;
 		count <= count + in;

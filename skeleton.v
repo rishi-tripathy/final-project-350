@@ -137,13 +137,13 @@ module skeleton(reset,
 	Hexadecimal_To_Seven_Segment yo(score1[3:0], seg1);
 	
 	wire [7:0] start_time, diff;
-	assign start_time = 8'd10;
+	assign start_time = 8'd30;
 	assign diff = start_time - curr_time_reg;
 	Hexadecimal_To_Seven_Segment h(diff[3:0], curr_t);
 	Hexadecimal_To_Seven_Segment yo2(score2[3:0], seg3);
 	Hexadecimal_To_Seven_Segment yo3(score3[3:0], seg4);
-	Decimal_To_Seven_Segment yo4(CLOCK_50, curr_time_reg, time_seg_ones, time_seg_tens);
-	Hexadecimal_To_Seven_Segment hex5(curr_time_reg, seg5);
+	Decimal_To_Seven_Segment yo4(CLOCK_50, diff, time_seg_ones, time_seg_tens);
+	Hexadecimal_To_Seven_Segment hex5(diff, seg5);
 	
 		
 	// VGA
