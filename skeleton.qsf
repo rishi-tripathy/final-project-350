@@ -128,7 +128,6 @@ set_location_assignment PIN_G21 -to leds[7]
 set_location_assignment PIN_M21 -to mDown
 set_location_assignment PIN_N21 -to mLeft
 set_location_assignment PIN_R24 -to mRight
-set_location_assignment PIN_AB22 -to inSwitch
 set_global_assignment -name VERILOG_FILE xm_pipeline.v
 set_global_assignment -name VERILOG_FILE writeback.v
 set_global_assignment -name VERILOG_FILE regfile.v
@@ -214,4 +213,7 @@ set_location_assignment PIN_AB17 -to score_seg_ones[3]
 set_location_assignment PIN_AB15 -to score_seg_ones[4]
 set_location_assignment PIN_AA15 -to score_seg_ones[5]
 set_location_assignment PIN_AC17 -to score_seg_ones[6]
+set_location_assignment PIN_AB22 -to inSwitch0
+set_location_assignment PIN_AB21 -to inSwitch1
+set_location_assignment PIN_AD21 -to inSwitch2
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

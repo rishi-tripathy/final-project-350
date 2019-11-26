@@ -173,7 +173,9 @@ VGA_B[4] << vga_controller:vga_ins.b_data
 VGA_B[5] << vga_controller:vga_ins.b_data
 VGA_B[6] << vga_controller:vga_ins.b_data
 VGA_B[7] << vga_controller:vga_ins.b_data
-inSwitch => inSwitch.IN1
+inSwitch0 => inSwitch0.IN1
+inSwitch1 => inSwitch1.IN1
+inSwitch2 => inSwitch2.IN1
 mLeft => mLeft.IN1
 mRight => mRight.IN1
 mUp => mUp.IN1
@@ -13183,7 +13185,9 @@ score_seg_tens[3] <= Decimal_To_Seven_Segment:h.port3
 score_seg_tens[4] <= Decimal_To_Seven_Segment:h.port3
 score_seg_tens[5] <= Decimal_To_Seven_Segment:h.port3
 score_seg_tens[6] <= Decimal_To_Seven_Segment:h.port3
-in => Add1.IN8
+in0 => always0.IN0
+in1 => always0.IN1
+in2 => always0.IN1
 clock => clock.IN1
 count[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
 count[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE

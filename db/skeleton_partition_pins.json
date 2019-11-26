@@ -348,7 +348,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "inSwitch",
+					"name" : "inSwitch0",
+					"strict" : false
+				},
+				{
+					"name" : "inSwitch1",
+					"strict" : false
+				},
+				{
+					"name" : "inSwitch2",
 					"strict" : false
 				}
 			]

@@ -12,7 +12,7 @@ module skeleton(reset,
 	VGA_R,   														//	VGA Red[9:0]
 	VGA_G,	 														//	VGA Green[9:0]
 	VGA_B,
-	inSwitch,
+	inSwitch0, inSwitch1, inSwitch2,
 	mLeft,
 	mRight,
 	mUp,
@@ -54,7 +54,7 @@ module skeleton(reset,
 	
 	
 	//Hoop
-	input inSwitch;
+	input inSwitch0, inSwitch1, inSwitch2;
 	
 	// clock divider (by 5, i.e., 10 MHz)
 	pll div(CLOCK_50,inclock);
@@ -78,7 +78,7 @@ module skeleton(reset,
 	and a0(score_count_en, ~diff[0], ~diff[1], ~diff[2], ~diff[3], ~diff[4], ~diff[5], ~diff[6], ~diff[7]);
 	
 	//switch from hoop
-	finalproject_b cont(score_seg_ones, score_seg_tens,inSwitch, clock, score_count, ~score_count_en, ~reset);
+	finalproject_b cont(score_seg_ones, score_seg_tens,inSwitch0, inSwitch1, inSwitch2, clock, score_count, ~score_count_en, ~reset);
 	
 	
 	// example for sending ps2 data to the first two seven segment displays
