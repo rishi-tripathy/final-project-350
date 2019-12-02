@@ -125,7 +125,6 @@ set_location_assignment PIN_H21 -to leds[4]
 set_location_assignment PIN_G20 -to leds[5]
 set_location_assignment PIN_G22 -to leds[6]
 set_location_assignment PIN_G21 -to leds[7]
-set_location_assignment PIN_M21 -to mDown
 set_location_assignment PIN_N21 -to mLeft
 set_location_assignment PIN_R24 -to mRight
 set_global_assignment -name VERILOG_FILE xm_pipeline.v
@@ -183,9 +182,6 @@ set_location_assignment PIN_L26 -to score[3]
 set_location_assignment PIN_L25 -to score[4]
 set_location_assignment PIN_J22 -to score[5]
 set_location_assignment PIN_H22 -to score[6]
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
 set_global_assignment -name VERILOG_FILE leaderboard.v
 set_location_assignment PIN_M23 -to reset
@@ -213,7 +209,10 @@ set_location_assignment PIN_AB17 -to score_seg_ones[3]
 set_location_assignment PIN_AB15 -to score_seg_ones[4]
 set_location_assignment PIN_AA15 -to score_seg_ones[5]
 set_location_assignment PIN_AC17 -to score_seg_ones[6]
-set_location_assignment PIN_AB22 -to inSwitch0
+set_location_assignment PIN_AB28 -to inSwitch0
 set_location_assignment PIN_AB21 -to inSwitch1
 set_location_assignment PIN_AD21 -to inSwitch2
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
