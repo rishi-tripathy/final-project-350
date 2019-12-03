@@ -1,7 +1,15 @@
 nop
 nop
-addi $r2, $r0, 5
+nop
+nop
 loop:
 	nop
-	addi $r1, $r1, 1
-	bne $r1, $r2, loop
+	nop
+	bne $r1, $r15, loop
+nop
+nop
+addi $r5, $r0, 1
+nop
+nop
+addi $r5, $r0, 0
+j loop
