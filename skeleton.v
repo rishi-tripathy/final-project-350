@@ -16,8 +16,9 @@ module skeleton(reset,
 	mLeft,
 	mRight,
 	mUp,
-	mDown, indicator,
-	CLOCK_50);  													// 50 MHz clock
+	mDown, indicator, sampled, timer, dc,
+	dataaa, reg5,
+	CLOCK_50, div_clk, div_clk_counter, clock);  													// 50 MHz clock
 		
 	////////////////////////	VGA	////////////////////////////
 	output			VGA_CLK;   				//	VGA Clock
@@ -45,7 +46,7 @@ module skeleton(reset,
 	output indicator;
 	
 	
-	wire			 clock;
+	output			 clock;
 	wire			 lcd_write_en;
 	wire 	[31:0] lcd_write_data;
 	wire	[7:0]	 ps2_key_data;
@@ -60,11 +61,32 @@ module skeleton(reset,
 	pll div(CLOCK_50,inclock);
 	assign clock = CLOCK_50;
 	
-	// UNCOMMENT FOLLOWING LINE AND COMMENT ABOVE LINE TO RUN AT 50 MHz
-	//assign clock = inclock;
 	
-	// your processor
-	processor_init(clock, reset, regA, dataA);
+	
+	// UNCOMMENT FOLLOWING LINE AND COMMENT ABOVE LINE TO RUN AT 50 MHz
+//	output inclock;
+//	wire clock2, clock3, clock4, clock5;
+//	assign clock2 = inclock;
+//	pll div1(clock2,clock3);
+	//pll div2(clock3,clock4);
+	//pll div3(clock4,clock5);
+	
+	processor_init (clock, 1'b0, regA, dataA, timer, reg5, dc);
+	output [31:0] dc;
+	wire [4:0] procReg;
+	output [31:0] dataaa;
+	assign dataaa = dataA;
+	assign procReg = regA;
+	wire isReg5;
+	and (isReg5, procReg[0], ~procReg[1], procReg[2], ~procReg[3], ~procReg[4]);
+	//wire yup;
+	and a5(yup, reg5, dataaa[0]);
+	wire sampled; 
+	output reg5;
+	assign sampled = yup;
+	output sampled;
+	
+	
 	
 	// keyboard controller
 //	PS2_Interface myps2(clock, resetn, ps2_clock, ps2_data, ps2_key_data, ps2_key_pressed, ps2_out);
@@ -98,6 +120,11 @@ module skeleton(reset,
 	
 	reg[7:0] curr_time_reg;
 	reg[31:0] timer;
+	reg div_clk;
+	output div_clk;
+	reg[31:0] div_clk_counter;
+	output[31:0] div_clk_counter;
+	output [31:0] timer;
 	wire [6:0] curr_t;
 	//reg game_over;
 	reg enA, hold;
@@ -109,10 +136,30 @@ module skeleton(reset,
 				curr_time_reg <= 8'b0;
 				hold <= 0;
 			end
-			if (timer>32'd100000000 && curr_time_reg < start_time)
+			if (yup)
+			begin
+			div_clk_counter <= div_clk_counter + 32'b1;
+			end
+			if (div_clk_counter<32'd1000000)
+			begin
+			div_clk <= 1'b0;
+			end
+			else if (div_clk_counter>32'd1000000)
+			begin
+			div_clk <= 1'b1;
+			div_clk_counter <= 32'b0;
+			end
+			
+			if (div_clk && curr_time_reg < start_time)
+			begin
+			curr_time_reg <= curr_time_reg + 1;
+			end
+			
+			if (yup) // && curr_time_reg < start_time)
 			begin
 				timer <= 32'b0;
-				curr_time_reg <= curr_time_reg + 1;
+				//div_clk_counter <= 32'b0;
+				//curr_time_reg <= curr_time_reg + 1;
 			end
 			if (diff == 'b0 && hold==0) begin
 				enA <= 1;

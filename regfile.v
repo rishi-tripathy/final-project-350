@@ -18,6 +18,9 @@ module regfile(
 				for(i = 0; i < 32; i = i + 1)
 					begin
 						registers[i] = 32'd0;
+						if (i == 15) begin
+							registers[i] = 32'd8;
+						end
 					end
 			end
 		else

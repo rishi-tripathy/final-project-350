@@ -1,11 +1,13 @@
-module processor_init(clock, reset, regA, data_A);
+ module processor_init(clock, reset, regA, data_A, count, reg5, q_imem);
     input clock, reset;
+	 input [31:0] count;
 
     /** IMEM **/
     // Figure out how to generate a Quartus syncram component and commit the generated verilog file.
     // Make sure you configure it correctly!
     wire [11:0] address_imem;
     wire [31:0] q_imem;
+	 output [31:0] q_imem;
 	 //output [31:0] instruction;
 	// assign instruction = q_imem;
     imem my_imem(
@@ -33,20 +35,39 @@ module processor_init(clock, reset, regA, data_A);
     // Instantiate your regfile
     wire ctrl_writeEnable;
     wire [4:0] ctrl_writeReg, ctrl_readRegA, ctrl_readRegB;
+	 wire [4:0] writeReg;
+	 wire writeEnable;
+	 assign writeEnable = 1;
+	 wire reg5;
+	 output reg5;
+	 and a4(reg5, ctrl_writeReg[0], ~ctrl_writeReg[1], ctrl_writeReg[2], ~ctrl_writeReg[3], ~ctrl_writeReg[4]);
+	 assign writeReg = reg5 ? ctrl_writeReg : 5'd1;
+	 assign writeVal = reg5 ? data_writeReg : count;
     wire [31:0] data_writeReg;
     wire [31:0] data_readRegA, data_readRegB;
+	 
+//	 output sig;
+	 wire sig;
+	 and aaa(sig, ~ctrl_readRegA[0], ~ctrl_readRegA[1], ~ctrl_readRegA[2], ~ctrl_readRegA[3], ~ctrl_readRegA[4]);
+	 
 	 output [4:0] regA;
-	 assign regA = ctrl_readRegA;
+	 //assign regA = readRegA;
+	 assign regA = ctrl_writeReg;
+	 
 	 output [31:0] data_A;
-	 assign data_A = data_readRegA;
+	 wire [4:0] readRegA;
+	 assign readRegA = sig ? 5'd5 : ctrl_readRegA;
+//	 assign data_A = data_readRegA;
+	 
+	 assign data_A = data_writeReg;
     regfile my_regfile(
         clock,
         ctrl_writeEnable,
         ctrl_reset,
-        ctrl_writeReg,
-        ctrl_readRegA,
+        writeReg,
+        readRegA,
         ctrl_readRegB,
-        data_writeReg,
+        writeVal,
         data_readRegA,
         data_readRegB
     );

@@ -89,7 +89,7 @@ module pll (
 				.vcooverrange (),
 				.vcounderrange ());
 	defparam
-		altpll_component.clk0_divide_by = 5,
+		altpll_component.clk0_divide_by = 10000,
 		altpll_component.clk0_duty_cycle = 50,
 		altpll_component.clk0_multiply_by = 2,
 		altpll_component.clk0_phase_shift = "0",
@@ -230,7 +230,7 @@ endmodule
 // Retrieval info: PRIVATE: USE_MIL_SPEED_GRADE NUMERIC "0"
 // Retrieval info: PRIVATE: ZERO_DELAY_RADIO STRING "0"
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
-// Retrieval info: CONSTANT: CLK0_DIVIDE_BY NUMERIC "5"
+// Retrieval info: CONSTANT: CLK0_DIVIDE_BY NUMERIC "1000"
 // Retrieval info: CONSTANT: CLK0_DUTY_CYCLE NUMERIC "50"
 // Retrieval info: CONSTANT: CLK0_MULTIPLY_BY NUMERIC "2"
 // Retrieval info: CONSTANT: CLK0_PHASE_SHIFT STRING "0"
