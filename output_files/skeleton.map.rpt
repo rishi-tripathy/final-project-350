@@ -1,5 +1,5 @@
 Analysis & Synthesis report for skeleton
-Tue Dec 03 00:13:53 2019
+Tue Dec 03 01:03:18 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -36,43 +36,49 @@ Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
  28. Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0
  29. Parameter Settings for Inferred Entity Instance: Decimal_To_Seven_Segment:yo4|lpm_divide:Mod0
  30. Parameter Settings for Inferred Entity Instance: Decimal_To_Seven_Segment:yo4|lpm_divide:Div0
- 31. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Mod3
- 32. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Div3
- 33. Parameter Settings for Inferred Entity Instance: processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|lpm_mult:Mult0
- 34. altpll Parameter Settings by Entity Instance
- 35. altsyncram Parameter Settings by Entity Instance
- 36. lpm_mult Parameter Settings by Entity Instance
- 37. Port Connectivity Checks: "VGA_Audio_PLL:p1"
- 38. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex5"
- 39. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:h"
- 40. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff7a"
- 41. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff6a"
- 42. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff5a"
- 43. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff4a"
- 44. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff3a"
- 45. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff2a"
- 46. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff1a"
- 47. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff0a"
- 48. Port Connectivity Checks: "leaderboard:l"
- 49. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex8"
- 50. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex7"
- 51. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|mw_pipeline:mw"
- 52. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|xm_pipeline:xm"
- 53. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|alu:alu1"
- 54. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|execute:x|alu:alu1"
- 55. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|execute:x"
- 56. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|dx_pipeline:dx"
- 57. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|fd_pipeline:fd"
- 58. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|alu:alu0"
- 59. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|pc_pipeline:p"
- 60. Port Connectivity Checks: "processor_init:comb_4|regfile:my_regfile"
- 61. Port Connectivity Checks: "processor_init:comb_4|imem:my_imem"
- 62. Port Connectivity Checks: "processor_init:comb_4"
- 63. Port Connectivity Checks: "pll:div"
- 64. Post-Synthesis Netlist Statistics for Top Partition
- 65. Elapsed Time Per Partition
- 66. Analysis & Synthesis Messages
- 67. Analysis & Synthesis Suppressed Messages
+ 31. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Mod9
+ 32. Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Div9
+ 33. Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Mod0
+ 34. Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Div0
+ 35. Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Mod0
+ 36. Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Div0
+ 37. Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Mod0
+ 38. Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Div0
+ 39. Parameter Settings for Inferred Entity Instance: processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|lpm_mult:Mult0
+ 40. altpll Parameter Settings by Entity Instance
+ 41. altsyncram Parameter Settings by Entity Instance
+ 42. lpm_mult Parameter Settings by Entity Instance
+ 43. Port Connectivity Checks: "VGA_Audio_PLL:p1"
+ 44. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex5"
+ 45. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:h"
+ 46. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff7a"
+ 47. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff6a"
+ 48. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff5a"
+ 49. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff4a"
+ 50. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff3a"
+ 51. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff2a"
+ 52. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff1a"
+ 53. Port Connectivity Checks: "leaderboard:l|dffe_ref:dff0a"
+ 54. Port Connectivity Checks: "leaderboard:l"
+ 55. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex8"
+ 56. Port Connectivity Checks: "Hexadecimal_To_Seven_Segment:hex7"
+ 57. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|mw_pipeline:mw"
+ 58. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|xm_pipeline:xm"
+ 59. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|alu:alu1"
+ 60. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|execute:x|alu:alu1"
+ 61. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|execute:x"
+ 62. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|dx_pipeline:dx"
+ 63. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|fd_pipeline:fd"
+ 64. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|alu:alu0"
+ 65. Port Connectivity Checks: "processor_init:comb_4|processor:my_processor|pc_pipeline:p"
+ 66. Port Connectivity Checks: "processor_init:comb_4|regfile:my_regfile"
+ 67. Port Connectivity Checks: "processor_init:comb_4|imem:my_imem"
+ 68. Port Connectivity Checks: "processor_init:comb_4"
+ 69. Port Connectivity Checks: "pll:div"
+ 70. Post-Synthesis Netlist Statistics for Top Partition
+ 71. Elapsed Time Per Partition
+ 72. Analysis & Synthesis Messages
+ 73. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -98,15 +104,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 03 00:13:53 2019       ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 03 01:03:18 2019       ;
 ; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                      ; skeleton                                    ;
 ; Top-level Entity Name              ; skeleton                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 3,403                                       ;
-;     Total combinational functions  ; 3,193                                       ;
-;     Dedicated logic registers      ; 935                                         ;
-; Total registers                    ; 935                                         ;
+; Total logic elements               ; 3,982                                       ;
+;     Total combinational functions  ; 3,769                                       ;
+;     Dedicated logic registers      ; 959                                         ;
+; Total registers                    ; 959                                         ;
 ; Total pins                         ; 315                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 2,725,888                                   ;
@@ -307,20 +313,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 3,403          ;
+; Estimated Total logic elements              ; 3,982          ;
 ;                                             ;                ;
-; Total combinational functions               ; 3193           ;
+; Total combinational functions               ; 3769           ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 1232           ;
-;     -- 3 input functions                    ; 1027           ;
-;     -- <=2 input functions                  ; 934            ;
+;     -- 4 input functions                    ; 1434           ;
+;     -- 3 input functions                    ; 1189           ;
+;     -- <=2 input functions                  ; 1146           ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 2325           ;
-;     -- arithmetic mode                      ; 868            ;
+;     -- normal mode                          ; 2787           ;
+;     -- arithmetic mode                      ; 982            ;
 ;                                             ;                ;
-; Total registers                             ; 935            ;
-;     -- Dedicated logic registers            ; 935            ;
+; Total registers                             ; 959            ;
+;     -- Dedicated logic registers            ; 959            ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
 ; I/O pins                                    ; 315            ;
@@ -332,9 +338,9 @@ refer to the applicable agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 837            ;
-; Total fan-out                               ; 18845          ;
-; Average fan-out                             ; 3.65           ;
+; Maximum fan-out                             ; 861            ;
+; Total fan-out                               ; 20542          ;
+; Average fan-out                             ; 3.57           ;
 +---------------------------------------------+----------------+
 
 
@@ -343,8 +349,8 @@ refer to the applicable agreement for further details.
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 ; Compilation Hierarchy Node                     ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                      ; Entity Name                  ; Library Name ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
-; |skeleton                                      ; 3193 (147)          ; 935 (75)                  ; 2725888     ; 8            ; 0       ; 4         ; 315  ; 0            ; |skeleton                                                                                                                                                ; skeleton                     ; work         ;
-;    |Decimal_To_Seven_Segment:yo4|              ; 137 (27)            ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Decimal_To_Seven_Segment:yo4                                                                                                                   ; Decimal_To_Seven_Segment     ; work         ;
+; |skeleton                                      ; 3769 (147)          ; 959 (75)                  ; 2725888     ; 8            ; 0       ; 4         ; 315  ; 0            ; |skeleton                                                                                                                                                ; skeleton                     ; work         ;
+;    |Decimal_To_Seven_Segment:yo4|              ; 136 (26)            ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Decimal_To_Seven_Segment:yo4                                                                                                                   ; Decimal_To_Seven_Segment     ; work         ;
 ;       |lpm_divide:Div0|                        ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Decimal_To_Seven_Segment:yo4|lpm_divide:Div0                                                                                                   ; lpm_divide                   ; work         ;
 ;          |lpm_divide_jhm:auto_generated|       ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Decimal_To_Seven_Segment:yo4|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                                     ; lpm_divide_jhm               ; work         ;
 ;             |sign_div_unsign_bkh:divider|      ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Decimal_To_Seven_Segment:yo4|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                                         ; sign_div_unsign_bkh          ; work         ;
@@ -360,7 +366,7 @@ refer to the applicable agreement for further details.
 ;    |Reset_Delay:r0|                            ; 27 (27)             ; 21 (21)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|Reset_Delay:r0                                                                                                                                 ; Reset_Delay                  ; work         ;
 ;    |VGA_Audio_PLL:p1|                          ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|VGA_Audio_PLL:p1                                                                                                                               ; VGA_Audio_PLL                ; work         ;
 ;       |altpll:altpll_component|                ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|VGA_Audio_PLL:p1|altpll:altpll_component                                                                                                       ; altpll                       ; work         ;
-;    |finalproject_b:cont|                       ; 200 (66)            ; 56 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont                                                                                                                            ; finalproject_b               ; work         ;
+;    |finalproject_b:cont|                       ; 572 (66)            ; 80 (48)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont                                                                                                                            ; finalproject_b               ; work         ;
 ;       |Decimal_To_Seven_Segment:h|             ; 134 (24)            ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h                                                                                                 ; Decimal_To_Seven_Segment     ; work         ;
 ;          |lpm_divide:Div0|                     ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0                                                                                 ; lpm_divide                   ; work         ;
 ;             |lpm_divide_jhm:auto_generated|    ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm               ; work         ;
@@ -370,6 +376,33 @@ refer to the applicable agreement for further details.
 ;             |lpm_divide_m9m:auto_generated|    ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m               ; work         ;
 ;                |sign_div_unsign_bkh:divider|   ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh          ; work         ;
 ;                   |alt_u_div_a4f:divider|      ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f                ; work         ;
+;       |Decimal_To_Seven_Segment:i|             ; 124 (14)            ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:i                                                                                                 ; Decimal_To_Seven_Segment     ; work         ;
+;          |lpm_divide:Div0|                     ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Div0                                                                                 ; lpm_divide                   ; work         ;
+;             |lpm_divide_jhm:auto_generated|    ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm               ; work         ;
+;                |sign_div_unsign_bkh:divider|   ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh          ; work         ;
+;                   |alt_u_div_a4f:divider|      ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f                ; work         ;
+;          |lpm_divide:Mod0|                     ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Mod0                                                                                 ; lpm_divide                   ; work         ;
+;             |lpm_divide_m9m:auto_generated|    ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m               ; work         ;
+;                |sign_div_unsign_bkh:divider|   ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh          ; work         ;
+;                   |alt_u_div_a4f:divider|      ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f                ; work         ;
+;       |Decimal_To_Seven_Segment:j|             ; 123 (13)            ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:j                                                                                                 ; Decimal_To_Seven_Segment     ; work         ;
+;          |lpm_divide:Div0|                     ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Div0                                                                                 ; lpm_divide                   ; work         ;
+;             |lpm_divide_jhm:auto_generated|    ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm               ; work         ;
+;                |sign_div_unsign_bkh:divider|   ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh          ; work         ;
+;                   |alt_u_div_a4f:divider|      ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f                ; work         ;
+;          |lpm_divide:Mod0|                     ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Mod0                                                                                 ; lpm_divide                   ; work         ;
+;             |lpm_divide_m9m:auto_generated|    ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m               ; work         ;
+;                |sign_div_unsign_bkh:divider|   ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh          ; work         ;
+;                   |alt_u_div_a4f:divider|      ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f                ; work         ;
+;       |Decimal_To_Seven_Segment:k|             ; 125 (15)            ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:k                                                                                                 ; Decimal_To_Seven_Segment     ; work         ;
+;          |lpm_divide:Div0|                     ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Div0                                                                                 ; lpm_divide                   ; work         ;
+;             |lpm_divide_jhm:auto_generated|    ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Div0|lpm_divide_jhm:auto_generated                                                   ; lpm_divide_jhm               ; work         ;
+;                |sign_div_unsign_bkh:divider|   ; 51 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh          ; work         ;
+;                   |alt_u_div_a4f:divider|      ; 51 (51)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Div0|lpm_divide_jhm:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f                ; work         ;
+;          |lpm_divide:Mod0|                     ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Mod0                                                                                 ; lpm_divide                   ; work         ;
+;             |lpm_divide_m9m:auto_generated|    ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Mod0|lpm_divide_m9m:auto_generated                                                   ; lpm_divide_m9m               ; work         ;
+;                |sign_div_unsign_bkh:divider|   ; 59 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider                       ; sign_div_unsign_bkh          ; work         ;
+;                   |alt_u_div_a4f:divider|      ; 59 (59)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Mod0|lpm_divide_m9m:auto_generated|sign_div_unsign_bkh:divider|alt_u_div_a4f:divider ; alt_u_div_a4f                ; work         ;
 ;    |leaderboard:l|                             ; 44 (44)             ; 24 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l                                                                                                                                  ; leaderboard                  ; work         ;
 ;       |dffe_ref:dff0a|                         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff0a                                                                                                                   ; dffe_ref                     ; work         ;
 ;       |dffe_ref:dff0b|                         ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|leaderboard:l|dffe_ref:dff0b                                                                                                                   ; dffe_ref                     ; work         ;
@@ -638,7 +671,7 @@ refer to the applicable agreement for further details.
 ;             |dffe_ref:dffg3|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|processor_init:comb_4|processor:my_processor|xm_pipeline:xm|dffe_ref:dffg3                                                                     ; dffe_ref                     ; work         ;
 ;             |dffe_ref:dffg4|                   ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|processor_init:comb_4|processor:my_processor|xm_pipeline:xm|dffe_ref:dffg4                                                                     ; dffe_ref                     ; work         ;
 ;       |regfile:my_regfile|                     ; 7 (7)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|processor_init:comb_4|regfile:my_regfile                                                                                                       ; regfile                      ; work         ;
-;    |vga_controller:vga_ins|                    ; 993 (261)           ; 164 (134)                 ; 2463744     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins                                                                                                                         ; vga_controller               ; work         ;
+;    |vga_controller:vga_ins|                    ; 1198 (465)          ; 164 (134)                 ; 2463744     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins                                                                                                                         ; vga_controller               ; work         ;
 ;       |img_data:img_data_inst|                 ; 278 (0)             ; 6 (0)                     ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst                                                                                                  ; img_data                     ; work         ;
 ;          |altsyncram:altsyncram_component|     ; 278 (0)             ; 6 (0)                     ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component                                                                  ; altsyncram                   ; work         ;
 ;             |altsyncram_ekc1:auto_generated|   ; 278 (0)             ; 6 (6)                     ; 2457600     ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated                                   ; altsyncram_ekc1              ; work         ;
@@ -647,14 +680,14 @@ refer to the applicable agreement for further details.
 ;       |img_index:img_index_inst|               ; 0 (0)               ; 0 (0)                     ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_index:img_index_inst                                                                                                ; img_index                    ; work         ;
 ;          |altsyncram:altsyncram_component|     ; 0 (0)               ; 0 (0)                     ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component                                                                ; altsyncram                   ; work         ;
 ;             |altsyncram_pjc1:auto_generated|   ; 0 (0)               ; 0 (0)                     ; 6144        ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component|altsyncram_pjc1:auto_generated                                 ; altsyncram_pjc1              ; work         ;
-;       |lpm_divide:Div3|                        ; 201 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div3                                                                                                         ; lpm_divide                   ; work         ;
-;          |lpm_divide_ikm:auto_generated|       ; 201 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div3|lpm_divide_ikm:auto_generated                                                                           ; lpm_divide_ikm               ; work         ;
-;             |sign_div_unsign_anh:divider|      ; 201 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div3|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider                                               ; sign_div_unsign_anh          ; work         ;
-;                |alt_u_div_8af:divider|         ; 201 (201)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div3|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                         ; alt_u_div_8af                ; work         ;
-;       |lpm_divide:Mod3|                        ; 209 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod3                                                                                                         ; lpm_divide                   ; work         ;
-;          |lpm_divide_lcm:auto_generated|       ; 209 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod3|lpm_divide_lcm:auto_generated                                                                           ; lpm_divide_lcm               ; work         ;
-;             |sign_div_unsign_anh:divider|      ; 209 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod3|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                                               ; sign_div_unsign_anh          ; work         ;
-;                |alt_u_div_8af:divider|         ; 209 (209)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod3|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                         ; alt_u_div_8af                ; work         ;
+;       |lpm_divide:Div9|                        ; 202 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div9                                                                                                         ; lpm_divide                   ; work         ;
+;          |lpm_divide_ikm:auto_generated|       ; 202 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div9|lpm_divide_ikm:auto_generated                                                                           ; lpm_divide_ikm               ; work         ;
+;             |sign_div_unsign_anh:divider|      ; 202 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div9|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider                                               ; sign_div_unsign_anh          ; work         ;
+;                |alt_u_div_8af:divider|         ; 202 (202)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Div9|lpm_divide_ikm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                         ; alt_u_div_8af                ; work         ;
+;       |lpm_divide:Mod9|                        ; 209 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod9                                                                                                         ; lpm_divide                   ; work         ;
+;          |lpm_divide_lcm:auto_generated|       ; 209 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod9|lpm_divide_lcm:auto_generated                                                                           ; lpm_divide_lcm               ; work         ;
+;             |sign_div_unsign_anh:divider|      ; 209 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod9|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider                                               ; sign_div_unsign_anh          ; work         ;
+;                |alt_u_div_8af:divider|         ; 209 (209)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|lpm_divide:Mod9|lpm_divide_lcm:auto_generated|sign_div_unsign_anh:divider|alt_u_div_8af:divider                         ; alt_u_div_8af                ; work         ;
 ;       |video_sync_generator:LTM_ins|           ; 44 (44)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |skeleton|vga_controller:vga_ins|video_sync_generator:LTM_ins                                                                                            ; video_sync_generator         ; work         ;
 +------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1847,7 +1880,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 935   ;
+; Total registers                              ; 959   ;
 ; Number of registers using Synchronous Clear  ; 203   ;
 ; Number of registers using Synchronous Load   ; 81    ;
 ; Number of registers using Asynchronous Clear ; 72    ;
@@ -1892,7 +1925,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; 40:1               ; 2 bits    ; 52 LEs        ; 16 LEs               ; 36 LEs                 ; Yes        ; |skeleton|processor_init:comb_4|processor:my_processor|xm_pipeline:xm|dffe_ref:dff3|q                      ;
 ; 40:1               ; 2 bits    ; 52 LEs        ; 18 LEs               ; 34 LEs                 ; Yes        ; |skeleton|processor_init:comb_4|processor:my_processor|xm_pipeline:xm|dffe_ref:dff29|q                     ;
 ; 41:1               ; 2 bits    ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |skeleton|processor_init:comb_4|processor:my_processor|xm_pipeline:xm|dffe_ref:dff1|q                      ;
-; 29:1               ; 24 bits   ; 456 LEs       ; 24 LEs               ; 432 LEs                ; Yes        ; |skeleton|vga_controller:vga_ins|g_data[0]                                                                 ;
+; 71:1               ; 24 bits   ; 1128 LEs      ; 24 LEs               ; 1104 LEs               ; Yes        ; |skeleton|vga_controller:vga_ins|g_data[0]                                                                 ;
 ; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; No         ; |skeleton|processor_init:comb_4|processor:my_processor|writeback:w|data_writeReg[18]                       ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |skeleton|processor_init:comb_4|processor:my_processor|writeback:w|data_writeReg[1]                        ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |skeleton|processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count             ;
@@ -3040,7 +3073,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Mod3 ;
+; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Mod9 ;
 +------------------------+----------------+-----------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                          ;
 +------------------------+----------------+-----------------------------------------------+
@@ -3063,7 +3096,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +-----------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Div3 ;
+; Parameter Settings for Inferred Entity Instance: vga_controller:vga_ins|lpm_divide:Div9 ;
 +------------------------+----------------+-----------------------------------------------+
 ; Parameter Name         ; Value          ; Type                                          ;
 +------------------------+----------------+-----------------------------------------------+
@@ -3082,6 +3115,144 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
 ; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
 +------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:i|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:j|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Mod0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_m9m ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: finalproject_b:cont|Decimal_To_Seven_Segment:k|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 8              ; Untyped                                                               ;
+; LPM_WIDTHD             ; 4              ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_jhm ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -3318,19 +3489,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "leaderboard:l"                                                                                                                                          ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                                                                                         ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; user_id      ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "user_id[2..1]" will be connected to GND. ;
-; score1[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
-; score2[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
-; score3[7..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
-; id1          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
-; id2          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
-; id3          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "leaderboard:l"                                                                                                                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; user_id ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (3 bits) it drives.  Extra input bit(s) "user_id[2..1]" will be connected to GND. ;
+; id1     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
+; id2     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
+; id3     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------+
@@ -3497,7 +3665,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 315                         ;
-; cycloneiii_ff         ; 935                         ;
+; cycloneiii_ff         ; 959                         ;
 ;     CLR               ; 43                          ;
 ;     CLR SCLR          ; 19                          ;
 ;     ENA               ; 337                         ;
@@ -3507,25 +3675,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 128                         ;
 ;     SCLR SLD          ; 4                           ;
 ;     SLD               ; 13                          ;
-;     plain             ; 265                         ;
+;     plain             ; 289                         ;
 ; cycloneiii_io_obuf    ; 2                           ;
-; cycloneiii_lcell_comb ; 3202                        ;
-;     arith             ; 868                         ;
-;         2 data inputs ; 288                         ;
-;         3 data inputs ; 580                         ;
-;     normal            ; 2334                        ;
-;         0 data inputs ; 44                          ;
-;         1 data inputs ; 27                          ;
-;         2 data inputs ; 584                         ;
-;         3 data inputs ; 447                         ;
-;         4 data inputs ; 1232                        ;
+; cycloneiii_lcell_comb ; 3778                        ;
+;     arith             ; 982                         ;
+;         2 data inputs ; 306                         ;
+;         3 data inputs ; 676                         ;
+;     normal            ; 2796                        ;
+;         0 data inputs ; 74                          ;
+;         1 data inputs ; 36                          ;
+;         2 data inputs ; 739                         ;
+;         3 data inputs ; 513                         ;
+;         4 data inputs ; 1434                        ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 392                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 31.90                       ;
-; Average LUT depth     ; 9.63                        ;
+; Max LUT depth         ; 33.90                       ;
+; Average LUT depth     ; 10.43                       ;
 +-----------------------+-----------------------------+
 
 
@@ -3534,7 +3702,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:07     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -3544,7 +3712,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Dec 03 00:13:32 2019
+    Info: Processing started: Tue Dec 03 01:02:55 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off skeleton -c skeleton
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -3627,25 +3795,25 @@ Warning (10236): Verilog HDL Implicit Net warning at processor.v(273): created i
 Warning (10236): Verilog HDL Implicit Net warning at processor.v(278): created implicit net for "ignore3" File: C:/Users/mt265/FinalProj/final-project-350/processor.v Line: 278
 Warning (10236): Verilog HDL Implicit Net warning at processor.v(278): created implicit net for "ignore4" File: C:/Users/mt265/FinalProj/final-project-350/processor.v Line: 278
 Warning (10236): Verilog HDL Implicit Net warning at processor.v(278): created implicit net for "ignore5" File: C:/Users/mt265/FinalProj/final-project-350/processor.v Line: 278
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(61): created implicit net for "inclock" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 61
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(74): created implicit net for "regA" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 74
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(74): created implicit net for "dataA" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 74
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(83): created implicit net for "yup" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 83
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(182): created implicit net for "user_id" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 182
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(182): created implicit net for "id1" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 182
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(182): created implicit net for "id2" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 182
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(182): created implicit net for "id3" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 182
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(197): created implicit net for "DLY_RST" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 197
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(198): created implicit net for "VGA_CTRL_CLK" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 198
-Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(198): created implicit net for "AUD_CTRL_CLK" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 198
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(62): created implicit net for "inclock" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 62
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(75): created implicit net for "regA" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 75
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(75): created implicit net for "dataA" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 75
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(84): created implicit net for "yup" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 84
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(183): created implicit net for "user_id" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 183
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(183): created implicit net for "id1" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 183
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(183): created implicit net for "id2" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 183
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(183): created implicit net for "id3" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 183
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(198): created implicit net for "DLY_RST" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 198
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(199): created implicit net for "VGA_CTRL_CLK" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 199
+Warning (10236): Verilog HDL Implicit Net warning at skeleton.v(199): created implicit net for "AUD_CTRL_CLK" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 199
 Warning (10236): Verilog HDL Implicit Net warning at processor_init.v(45): created implicit net for "writeVal" File: C:/Users/mt265/FinalProj/final-project-350/processor_init.v Line: 45
 Warning (10236): Verilog HDL Implicit Net warning at processor_init.v(66): created implicit net for "ctrl_reset" File: C:/Users/mt265/FinalProj/final-project-350/processor_init.v Line: 66
 Warning (10236): Verilog HDL Implicit Net warning at leaderboard.v(58): created implicit net for "clr" File: C:/Users/mt265/FinalProj/final-project-350/leaderboard.v Line: 58
-Critical Warning (10846): Verilog HDL Instantiation warning at skeleton.v(74): instance has no name File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 74
-Warning (10227): Verilog HDL Port Declaration warning at finalproject_b.v(5): data type declaration for "count" declares packed dimensions but the port declaration declaration does not File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 5
-Info (10499): HDL info at finalproject_b.v(8): see declaration for object "count" File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 8
+Critical Warning (10846): Verilog HDL Instantiation warning at skeleton.v(75): instance has no name File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 75
+Warning (10227): Verilog HDL Port Declaration warning at finalproject_b.v(6): data type declaration for "count" declares packed dimensions but the port declaration declaration does not File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 6
+Info (10499): HDL info at finalproject_b.v(9): see declaration for object "count" File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 9
 Info (12127): Elaborating entity "skeleton" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at skeleton.v(155): truncated value with size 32 to match size of target (8) File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 155
+Warning (10230): Verilog HDL assignment warning at skeleton.v(156): truncated value with size 32 to match size of target (8) File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 156
 Warning (10034): Output port "debug_data_in" at skeleton.v(42) has no driver File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 42
 Warning (10034): Output port "debug_addr" at skeleton.v(43) has no driver File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 43
 Warning (10034): Output port "leds[0]" at skeleton.v(40) has no driver File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 40
@@ -3657,7 +3825,7 @@ Warning (10034): Output port "lcd_rs" at skeleton.v(39) has no driver File: C:/U
 Warning (10034): Output port "lcd_on" at skeleton.v(39) has no driver File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 39
 Warning (10034): Output port "lcd_blon" at skeleton.v(39) has no driver File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 39
 Warning (10034): Output port "VGA_SYNC" at skeleton.v(28) has no driver File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 28
-Info (12128): Elaborating entity "pll" for hierarchy "pll:div" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 61
+Info (12128): Elaborating entity "pll" for hierarchy "pll:div" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 62
 Info (12128): Elaborating entity "altpll" for hierarchy "pll:div|altpll:altpll_component" File: C:/Users/mt265/FinalProj/final-project-350/pll.v Line: 90
 Info (12130): Elaborated megafunction instantiation "pll:div|altpll:altpll_component" File: C:/Users/mt265/FinalProj/final-project-350/pll.v Line: 90
 Info (12133): Instantiated megafunction "pll:div|altpll:altpll_component" with the following parameter: File: C:/Users/mt265/FinalProj/final-project-350/pll.v Line: 90
@@ -3714,7 +3882,7 @@ Info (12133): Instantiated megafunction "pll:div|altpll:altpll_component" with t
 Info (12021): Found 1 design units, including 1 entities, in source file db/pll_altpll.v
     Info (12023): Found entity 1: pll_altpll File: C:/Users/mt265/FinalProj/final-project-350/db/pll_altpll.v Line: 29
 Info (12128): Elaborating entity "pll_altpll" for hierarchy "pll:div|altpll:altpll_component|pll_altpll:auto_generated" File: c:/intelfpga_lite/17.1/quartus/libraries/megafunctions/altpll.tdf Line: 897
-Info (12128): Elaborating entity "processor_init" for hierarchy "processor_init:comb_4" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 74
+Info (12128): Elaborating entity "processor_init" for hierarchy "processor_init:comb_4" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 75
 Warning (10036): Verilog HDL or VHDL warning at processor_init.v(39): object "writeEnable" assigned a value but never read File: C:/Users/mt265/FinalProj/final-project-350/processor_init.v Line: 39
 Warning (10230): Verilog HDL assignment warning at processor_init.v(45): truncated value with size 32 to match size of target (1) File: C:/Users/mt265/FinalProj/final-project-350/processor_init.v Line: 45
 Info (12128): Elaborating entity "imem" for hierarchy "processor_init:comb_4|imem:my_imem" File: C:/Users/mt265/FinalProj/final-project-350/processor_init.v Line: 17
@@ -3782,14 +3950,14 @@ Info (12128): Elaborating entity "xm_pipeline" for hierarchy "processor_init:com
 Info (12128): Elaborating entity "memory" for hierarchy "processor_init:comb_4|processor:my_processor|memory:m" File: C:/Users/mt265/FinalProj/final-project-350/processor.v Line: 327
 Info (12128): Elaborating entity "mw_pipeline" for hierarchy "processor_init:comb_4|processor:my_processor|mw_pipeline:mw" File: C:/Users/mt265/FinalProj/final-project-350/processor.v Line: 330
 Info (12128): Elaborating entity "writeback" for hierarchy "processor_init:comb_4|processor:my_processor|writeback:w" File: C:/Users/mt265/FinalProj/final-project-350/processor.v Line: 335
-Info (12128): Elaborating entity "finalproject_b" for hierarchy "finalproject_b:cont" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 103
-Warning (10230): Verilog HDL assignment warning at finalproject_b.v(19): truncated value with size 32 to match size of target (8) File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 19
-Warning (10230): Verilog HDL assignment warning at finalproject_b.v(23): truncated value with size 32 to match size of target (8) File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 23
-Info (12128): Elaborating entity "Decimal_To_Seven_Segment" for hierarchy "finalproject_b:cont|Decimal_To_Seven_Segment:h" File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 49
+Info (12128): Elaborating entity "finalproject_b" for hierarchy "finalproject_b:cont" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 104
+Warning (10230): Verilog HDL assignment warning at finalproject_b.v(20): truncated value with size 32 to match size of target (8) File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 20
+Warning (10230): Verilog HDL assignment warning at finalproject_b.v(24): truncated value with size 32 to match size of target (8) File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 24
+Info (12128): Elaborating entity "Decimal_To_Seven_Segment" for hierarchy "finalproject_b:cont|Decimal_To_Seven_Segment:h" File: C:/Users/mt265/FinalProj/final-project-350/finalproject_b.v Line: 50
 Warning (10230): Verilog HDL assignment warning at Decimal_To_Seven_Segment.v(37): truncated value with size 8 to match size of target (4) File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 37
 Warning (10230): Verilog HDL assignment warning at Decimal_To_Seven_Segment.v(38): truncated value with size 8 to match size of target (4) File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 38
-Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "Hexadecimal_To_Seven_Segment:hex7" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 115
-Info (12128): Elaborating entity "leaderboard" for hierarchy "leaderboard:l" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 182
+Info (12128): Elaborating entity "Hexadecimal_To_Seven_Segment" for hierarchy "Hexadecimal_To_Seven_Segment:hex7" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 116
+Info (12128): Elaborating entity "leaderboard" for hierarchy "leaderboard:l" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 183
 Warning (10235): Verilog HDL Always Construct warning at leaderboard.v(15): variable "score_count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mt265/FinalProj/final-project-350/leaderboard.v Line: 15
 Warning (10235): Verilog HDL Always Construct warning at leaderboard.v(15): variable "score1" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mt265/FinalProj/final-project-350/leaderboard.v Line: 15
 Warning (10235): Verilog HDL Always Construct warning at leaderboard.v(20): variable "score_count" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/mt265/FinalProj/final-project-350/leaderboard.v Line: 20
@@ -3809,9 +3977,9 @@ Warning (10034): Output port "id3" at leaderboard.v(6) has no driver File: C:/Us
 Info (10041): Inferred latch for "ctrl3" at leaderboard.v(13) File: C:/Users/mt265/FinalProj/final-project-350/leaderboard.v Line: 13
 Info (10041): Inferred latch for "ctrl2" at leaderboard.v(13) File: C:/Users/mt265/FinalProj/final-project-350/leaderboard.v Line: 13
 Info (10041): Inferred latch for "ctrl1" at leaderboard.v(13) File: C:/Users/mt265/FinalProj/final-project-350/leaderboard.v Line: 13
-Info (12128): Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:r0" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 197
+Info (12128): Elaborating entity "Reset_Delay" for hierarchy "Reset_Delay:r0" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 198
 Warning (10230): Verilog HDL assignment warning at Reset_Delay.v(10): truncated value with size 32 to match size of target (20) File: C:/Users/mt265/FinalProj/final-project-350/Reset_Delay.v Line: 10
-Info (12128): Elaborating entity "VGA_Audio_PLL" for hierarchy "VGA_Audio_PLL:p1" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 198
+Info (12128): Elaborating entity "VGA_Audio_PLL" for hierarchy "VGA_Audio_PLL:p1" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 199
 Info (12128): Elaborating entity "altpll" for hierarchy "VGA_Audio_PLL:p1|altpll:altpll_component" File: C:/Users/mt265/FinalProj/final-project-350/VGA_Audio_PLL.v Line: 107
 Info (12130): Elaborated megafunction instantiation "VGA_Audio_PLL:p1|altpll:altpll_component" File: C:/Users/mt265/FinalProj/final-project-350/VGA_Audio_PLL.v Line: 107
 Info (12133): Instantiated megafunction "VGA_Audio_PLL:p1|altpll:altpll_component" with the following parameter: File: C:/Users/mt265/FinalProj/final-project-350/VGA_Audio_PLL.v Line: 107
@@ -3873,16 +4041,16 @@ Info (12133): Instantiated megafunction "VGA_Audio_PLL:p1|altpll:altpll_componen
     Info (12134): Parameter "port_extclk1" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
-Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga_ins" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 214
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(70): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 70
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(100): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 100
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(103): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 103
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(106): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 106
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(109): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 109
-Info (12128): Elaborating entity "video_sync_generator" for hierarchy "vga_controller:vga_ins|video_sync_generator:LTM_ins" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 60
+Info (12128): Elaborating entity "vga_controller" for hierarchy "vga_controller:vga_ins" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 221
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(107): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 107
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(137): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 137
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(140): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 140
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(143): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 143
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(146): truncated value with size 32 to match size of target (19) File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 146
+Info (12128): Elaborating entity "video_sync_generator" for hierarchy "vga_controller:vga_ins|video_sync_generator:LTM_ins" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 97
 Warning (10230): Verilog HDL assignment warning at video_sync_generator.v(77): truncated value with size 32 to match size of target (10) File: C:/Users/mt265/FinalProj/final-project-350/video_sync_generator.v Line: 77
 Warning (10230): Verilog HDL assignment warning at video_sync_generator.v(80): truncated value with size 32 to match size of target (11) File: C:/Users/mt265/FinalProj/final-project-350/video_sync_generator.v Line: 80
-Info (12128): Elaborating entity "img_data" for hierarchy "vga_controller:vga_ins|img_data:img_data_inst" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 79
+Info (12128): Elaborating entity "img_data" for hierarchy "vga_controller:vga_ins|img_data:img_data_inst" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 116
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component" File: C:/Users/mt265/FinalProj/final-project-350/img_data.v Line: 81
 Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component" File: C:/Users/mt265/FinalProj/final-project-350/img_data.v Line: 81
 Info (12133): Instantiated megafunction "vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/mt265/FinalProj/final-project-350/img_data.v Line: 81
@@ -3910,7 +4078,7 @@ Info (12128): Elaborating entity "decode_aaa" for hierarchy "vga_controller:vga_
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_1pb.tdf
     Info (12023): Found entity 1: mux_1pb File: C:/Users/mt265/FinalProj/final-project-350/db/mux_1pb.tdf Line: 22
 Info (12128): Elaborating entity "mux_1pb" for hierarchy "vga_controller:vga_ins|img_data:img_data_inst|altsyncram:altsyncram_component|altsyncram_ekc1:auto_generated|mux_1pb:mux2" File: C:/Users/mt265/FinalProj/final-project-350/db/altsyncram_ekc1.tdf Line: 40
-Info (12128): Elaborating entity "img_index" for hierarchy "vga_controller:vga_ins|img_index:img_index_inst" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 89
+Info (12128): Elaborating entity "img_index" for hierarchy "vga_controller:vga_ins|img_index:img_index_inst" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 126
 Info (12128): Elaborating entity "altsyncram" for hierarchy "vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component" File: C:/Users/mt265/FinalProj/final-project-350/img_index.v Line: 82
 Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component" File: C:/Users/mt265/FinalProj/final-project-350/img_index.v Line: 82
 Info (12133): Instantiated megafunction "vga_controller:vga_ins|img_index:img_index_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/mt265/FinalProj/final-project-350/img_index.v Line: 82
@@ -4002,13 +4170,19 @@ Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
     Warning (13049): Converted tri-state buffer "processor_init:comb_4|regfile:my_regfile|data_readRegB[2]" feeding internal logic into a wire File: C:/Users/mt265/FinalProj/final-project-350/regfile.v Line: 9
     Warning (13049): Converted tri-state buffer "processor_init:comb_4|regfile:my_regfile|data_readRegB[1]" feeding internal logic into a wire File: C:/Users/mt265/FinalProj/final-project-350/regfile.v Line: 9
     Warning (13049): Converted tri-state buffer "processor_init:comb_4|regfile:my_regfile|data_readRegB[0]" feeding internal logic into a wire File: C:/Users/mt265/FinalProj/final-project-350/regfile.v Line: 9
-Info (278001): Inferred 7 megafunctions from design logic
+Info (278001): Inferred 13 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:h|Mod0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 37
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:h|Div0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 38
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Decimal_To_Seven_Segment:yo4|Mod0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 37
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Decimal_To_Seven_Segment:yo4|Div0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 38
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|Mod3" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 466
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|Div3" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 464
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|Mod9" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 1049
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "vga_controller:vga_ins|Div9" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 1047
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:i|Mod0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:i|Div0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:j|Mod0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:j|Div0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 38
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:k|Mod0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 37
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "finalproject_b:cont|Decimal_To_Seven_Segment:k|Div0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 38
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|Mult0" File: C:/Users/mt265/FinalProj/final-project-350/multiplier.v Line: 54
 Info (12130): Elaborated megafunction instantiation "finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0" File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 37
 Info (12133): Instantiated megafunction "finalproject_b:cont|Decimal_To_Seven_Segment:h|lpm_divide:Mod0" with the following parameter: File: C:/Users/mt265/FinalProj/final-project-350/Decimal_To_Seven_Segment.v Line: 37
@@ -4034,8 +4208,8 @@ Info (12133): Instantiated megafunction "finalproject_b:cont|Decimal_To_Seven_Se
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_jhm.tdf
     Info (12023): Found entity 1: lpm_divide_jhm File: C:/Users/mt265/FinalProj/final-project-350/db/lpm_divide_jhm.tdf Line: 24
-Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|lpm_divide:Mod3" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 466
-Info (12133): Instantiated megafunction "vga_controller:vga_ins|lpm_divide:Mod3" with the following parameter: File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 466
+Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|lpm_divide:Mod9" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 1049
+Info (12133): Instantiated megafunction "vga_controller:vga_ins|lpm_divide:Mod9" with the following parameter: File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 1049
     Info (12134): Parameter "LPM_WIDTHN" = "19"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -4046,8 +4220,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_anh File: C:/Users/mt265/FinalProj/final-project-350/db/sign_div_unsign_anh.tdf Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_8af.tdf
     Info (12023): Found entity 1: alt_u_div_8af File: C:/Users/mt265/FinalProj/final-project-350/db/alt_u_div_8af.tdf Line: 26
-Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|lpm_divide:Div3" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 464
-Info (12133): Instantiated megafunction "vga_controller:vga_ins|lpm_divide:Div3" with the following parameter: File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 464
+Info (12130): Elaborated megafunction instantiation "vga_controller:vga_ins|lpm_divide:Div9" File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 1047
+Info (12133): Instantiated megafunction "vga_controller:vga_ins|lpm_divide:Div9" with the following parameter: File: C:/Users/mt265/FinalProj/final-project-350/vga_controller.v Line: 1047
     Info (12134): Parameter "LPM_WIDTHN" = "19"
     Info (12134): Parameter "LPM_WIDTHD" = "10"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -4161,37 +4335,37 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "seg8[5]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 41
     Warning (13410): Pin "seg8[6]" is stuck at VCC File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 41
     Warning (13410): Pin "VGA_SYNC" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 28
-    Warning (13410): Pin "dataaa[1]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[2]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[3]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[4]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[5]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[6]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[7]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[8]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[9]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[10]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[11]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[12]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[13]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[14]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[15]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[16]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[17]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[18]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[19]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[20]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[21]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[22]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[23]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[24]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[25]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[26]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[27]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[28]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[29]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[30]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
-    Warning (13410): Pin "dataaa[31]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 77
+    Warning (13410): Pin "dataaa[1]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[2]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[3]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[4]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[5]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[6]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[7]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[8]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[9]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[10]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[11]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[12]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[13]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[14]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[15]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[16]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[17]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[18]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[19]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[20]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[21]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[22]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[23]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[24]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[25]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[26]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[27]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[28]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[29]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[30]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
+    Warning (13410): Pin "dataaa[31]" is stuck at GND File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 78
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file C:/Users/mt265/FinalProj/final-project-350/output_files/skeleton.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -4203,19 +4377,19 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "mRight" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 32
     Warning (15610): No output dependent on input pin "mUp" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 32
     Warning (15610): No output dependent on input pin "mDown" File: C:/Users/mt265/FinalProj/final-project-350/skeleton.v Line: 32
-Info (21057): Implemented 4164 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 4743 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
     Info (21059): Implemented 304 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 3448 logic cells
+    Info (21061): Implemented 4027 logic cells
     Info (21064): Implemented 392 RAM segments
     Info (21065): Implemented 1 PLLs
     Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 271 warnings
-    Info: Peak virtual memory: 4864 megabytes
-    Info: Processing ended: Tue Dec 03 00:13:53 2019
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Tue Dec 03 01:03:18 2019
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:33
 
 
 +------------------------------------------+

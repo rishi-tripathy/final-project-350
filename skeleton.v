@@ -52,6 +52,7 @@ module skeleton(reset,
 	wire	[7:0]	 ps2_key_data;
 	wire			 ps2_key_pressed;
 	wire	[7:0]	 ps2_out;	
+	wire [6:0] lb1_seg_ones, lb1_seg_tens,lb2_seg_ones, lb2_seg_tens, lb3_seg_ones, lb3_seg_tens;
 	
 	
 	//Hoop
@@ -100,7 +101,7 @@ module skeleton(reset,
 	and a0(score_count_en, ~diff[0], ~diff[1], ~diff[2], ~diff[3], ~diff[4], ~diff[5], ~diff[6], ~diff[7]);
 	
 	//switch from hoop
-	finalproject_b cont(score_seg_ones, score_seg_tens,inSwitch0, inSwitch1, inSwitch2, clock, score_count, ~score_count_en, ~reset);
+	finalproject_b cont(score_seg_ones, score_seg_tens, lb1_seg_ones, lb1_seg_tens,lb2_seg_ones, lb2_seg_tens, lb3_seg_ones, lb3_seg_tens, inSwitch0, inSwitch1, inSwitch2, score1, score2, score3, clock, score_count, ~score_count_en, ~reset);
 	
 	
 	// example for sending ps2 data to the first two seven segment displays
@@ -208,6 +209,12 @@ module skeleton(reset,
 								 .time_segment_tens(time_seg_tens),
 								 .score_segment_ones(score_seg_ones),
 								 .score_segment_tens(score_seg_tens),
+								.lb1_segment_ones (lb1_seg_ones),
+								.lb1_segment_tens (lb1_seg_tens),
+								.lb2_segment_ones (lb2_seg_ones),
+								.lb2_segment_tens (lb2_seg_tens),
+								.lb3_segment_ones (lb3_seg_ones),
+								.lb3_segment_tens (lb3_seg_tens),
 								 .mLeft(mLeft),
 								 .mRight(mRight),
 								 .mUp(mUp),

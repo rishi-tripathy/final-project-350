@@ -10,6 +10,12 @@ module vga_controller(iRST_n,
 							 time_segment_tens,
 							 score_segment_ones,
 							 score_segment_tens,
+							 lb1_segment_ones,
+							 lb1_segment_tens,
+							 lb2_segment_ones,
+							 lb2_segment_tens,
+							 lb3_segment_ones,
+							 lb3_segment_tens,
 							 mLeft,
 							 mRight,
 							 mUp,
@@ -18,10 +24,23 @@ module vga_controller(iRST_n,
 localparam screenW = 640,
 segL = 60,
 segS = 6,
-segGap = 3;
+segGap = 3,
+
+segL_lb = 30,
+segS_lb = 3,
+segGap_lb = 2;
 
 // SHOT
-input[6:0] score_segment_ones, score_segment_tens, time_segment_ones, time_segment_tens;
+input[6:0] 				 time_segment_ones,
+							 time_segment_tens,
+							 score_segment_ones,
+							 score_segment_tens,
+							 lb1_segment_ones,
+							 lb1_segment_tens,
+							 lb2_segment_ones,
+							 lb2_segment_tens,
+							 lb3_segment_ones,
+							 lb3_segment_tens;
 
 //
  
@@ -39,10 +58,28 @@ output [7:0] g_data;
 output [7:0] r_data;                        
 ///////// ////
 reg [18:0] topLeft = 680;
-reg [18:0] scoreTopLeftTens = 9910;
+reg [18:0] scoreTopLeftTens =  9910;
 reg [18:0] scoreTopLeftOnes = 10000;
 reg [18:0] timeTopLeftTens = 137910;
 reg [18:0] timeTopLeftOnes = 138000;
+
+
+reg [18:0] lb1_TopLeftTens =  3210;
+reg [18:0] lb1_TopLeftOnes =  3255;
+
+reg [18:0] lb2_TopLeftTens = 54410;
+reg [18:0] lb2_TopLeftOnes = 54455;
+
+reg [18:0] lb3_TopLeftTens = 105610;
+reg [18:0] lb3_TopLeftOnes = 105655;
+
+
+
+
+
+
+
+
 reg [63:0] counter = 0;                     
 reg [18:0] ADDR;
 reg [23:0] bgr_data;
@@ -119,12 +156,558 @@ end
 //	end
 ///Attempting to insert numbers
 
+//LEADERBOARD
+
+   //LB1
+		
+
+
+		//ONES DIGIT
+	
+	//Top (segment 0)
+	else if (
+				~lb1_segment_ones[0] &&
+				ADDR/screenW <=(lb1_TopLeftOnes/screenW + segS_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftOnes/screenW) && 		//min Y
+				ADDR%screenW <=(lb1_TopLeftOnes%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb1_TopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Right (Segment 1)
+	else if (~lb1_segment_ones[1] &&
+				ADDR/screenW <=(lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftOnes/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftOnes%screenW + segL_lb + segGap_lb+ segS_lb) && 						//max X
+				ADDR%screenW >=(lb1_TopLeftOnes%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Right (Segment 2)
+	else if (~lb1_segment_ones[2] &&
+				ADDR/screenW <=(lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftOnes%screenW + segL_lb + segGap_lb+ segS_lb) && //max X
+				ADDR%screenW >=(lb1_TopLeftOnes%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Bottom (Segment 3)
+	else if (~lb1_segment_ones[3] &&
+				ADDR/screenW <=(lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb + segS_lb) && //max Y
+				ADDR/screenW >=(lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb) && //min Y
+				ADDR%screenW <=(lb1_TopLeftOnes%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb1_TopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Left (Segment 4)
+	else if (~lb1_segment_ones[4] &&
+				ADDR/screenW <=(lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftOnes%screenW + segS_lb) && //max X
+				ADDR%screenW >=(lb1_TopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Left (Segment 5)
+	else if (~lb1_segment_ones[5] &&
+				ADDR/screenW <=(lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftOnes/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftOnes%screenW + segS_lb) && 	//max X
+				ADDR%screenW >=(lb1_TopLeftOnes%screenW )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Center (Segment 6)
+	else if (~lb1_segment_ones[6] &&
+				ADDR/screenW <=(lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segS_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftOnes%screenW + segL_lb) && 	//max X
+				ADDR%screenW >=(lb1_TopLeftOnes%screenW + segS_lb + segGap_lb )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+		
+		//Tens DIGIT
+	
+	//Top (segment 0)
+	else if (
+				~lb1_segment_tens[0] &&
+				ADDR/screenW <=(lb1_TopLeftTens/screenW + segS_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftTens/screenW) && 		//min Y
+				ADDR%screenW <=(lb1_TopLeftTens%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb1_TopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Right (Segment 1)
+	else if (~lb1_segment_tens[1] &&
+				ADDR/screenW <=(lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftTens/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftTens%screenW + segL_lb + segGap_lb+ segS_lb) && 						//max X
+				ADDR%screenW >=(lb1_TopLeftTens%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Right (Segment 2)
+	else if (~lb1_segment_tens[2] &&
+				ADDR/screenW <=(lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftTens%screenW + segL_lb + segGap_lb+ segS_lb) && //max X
+				ADDR%screenW >=(lb1_TopLeftTens%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Bottom (Segment 3)
+	else if (~lb1_segment_tens[3] &&
+				ADDR/screenW <=(lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb + segS_lb) && //max Y
+				ADDR/screenW >=(lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb) && //min Y
+				ADDR%screenW <=(lb1_TopLeftTens%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb1_TopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Left (Segment 4)
+	else if (~lb1_segment_tens[4] &&
+				ADDR/screenW <=(lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftTens%screenW + segS_lb) && //max X
+				ADDR%screenW >=(lb1_TopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Left (Segment 5)
+	else if (~lb1_segment_tens[5] &&
+				ADDR/screenW <=(lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftTens/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftTens%screenW + segS_lb) && 	//max X
+				ADDR%screenW >=(lb1_TopLeftTens%screenW )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Center (Segment 6)
+	else if (~lb1_segment_tens[6] &&
+				ADDR/screenW <=(lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segS_lb) && //max Y
+				ADDR/screenW >= (lb1_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb) &&		//min Y
+				ADDR%screenW <=(lb1_TopLeftTens%screenW + segL_lb) && 	//max X
+				ADDR%screenW >=(lb1_TopLeftTens%screenW + segS_lb + segGap_lb )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+
+   //LB2
+		
+
+
+		//ONES DIGIT
+	
+	//Top (segment 0)
+	else if (
+				~lb2_segment_ones[0] &&
+				ADDR/screenW <=(lb2_TopLeftOnes/screenW + segS_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftOnes/screenW) && 		//min Y
+				ADDR%screenW <=(lb2_TopLeftOnes%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb2_TopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Right (Segment 1)
+	else if (~lb2_segment_ones[1] &&
+				ADDR/screenW <=(lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftOnes/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftOnes%screenW + segL_lb + segGap_lb+ segS_lb) && 						//max X
+				ADDR%screenW >=(lb2_TopLeftOnes%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Right (Segment 2)
+	else if (~lb2_segment_ones[2] &&
+				ADDR/screenW <=(lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftOnes%screenW + segL_lb + segGap_lb+ segS_lb) && //max X
+				ADDR%screenW >=(lb2_TopLeftOnes%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Bottom (Segment 3)
+	else if (~lb2_segment_ones[3] &&
+				ADDR/screenW <=(lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb + segS_lb) && //max Y
+				ADDR/screenW >=(lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb) && //min Y
+				ADDR%screenW <=(lb2_TopLeftOnes%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb2_TopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Left (Segment 4)
+	else if (~lb2_segment_ones[4] &&
+				ADDR/screenW <=(lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftOnes%screenW + segS_lb) && //max X
+				ADDR%screenW >=(lb2_TopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Left (Segment 5)
+	else if (~lb2_segment_ones[5] &&
+				ADDR/screenW <=(lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftOnes/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftOnes%screenW + segS_lb) && 	//max X
+				ADDR%screenW >=(lb2_TopLeftOnes%screenW )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Center (Segment 6)
+	else if (~lb2_segment_ones[6] &&
+				ADDR/screenW <=(lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segS_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftOnes%screenW + segL_lb) && 	//max X
+				ADDR%screenW >=(lb2_TopLeftOnes%screenW + segS_lb + segGap_lb )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+		
+		//Tens DIGIT
+	
+	//Top (segment 0)
+	else if (
+				~lb2_segment_tens[0] &&
+				ADDR/screenW <=(lb2_TopLeftTens/screenW + segS_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftTens/screenW) && 		//min Y
+				ADDR%screenW <=(lb2_TopLeftTens%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb2_TopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Right (Segment 1)
+	else if (~lb2_segment_tens[1] &&
+				ADDR/screenW <=(lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftTens/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftTens%screenW + segL_lb + segGap_lb+ segS_lb) && 						//max X
+				ADDR%screenW >=(lb2_TopLeftTens%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Right (Segment 2)
+	else if (~lb2_segment_tens[2] &&
+				ADDR/screenW <=(lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftTens%screenW + segL_lb + segGap_lb+ segS_lb) && //max X
+				ADDR%screenW >=(lb2_TopLeftTens%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Bottom (Segment 3)
+	else if (~lb2_segment_tens[3] &&
+				ADDR/screenW <=(lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb + segS_lb) && //max Y
+				ADDR/screenW >=(lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb) && //min Y
+				ADDR%screenW <=(lb2_TopLeftTens%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb2_TopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Left (Segment 4)
+	else if (~lb2_segment_tens[4] &&
+				ADDR/screenW <=(lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftTens%screenW + segS_lb) && //max X
+				ADDR%screenW >=(lb2_TopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Left (Segment 5)
+	else if (~lb2_segment_tens[5] &&
+				ADDR/screenW <=(lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftTens/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftTens%screenW + segS_lb) && 	//max X
+				ADDR%screenW >=(lb2_TopLeftTens%screenW )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Center (Segment 6)
+	else if (~lb2_segment_tens[6] &&
+				ADDR/screenW <=(lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segS_lb) && //max Y
+				ADDR/screenW >= (lb2_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb) &&		//min Y
+				ADDR%screenW <=(lb2_TopLeftTens%screenW + segL_lb) && 	//max X
+				ADDR%screenW >=(lb2_TopLeftTens%screenW + segS_lb + segGap_lb )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+
+		
+//LB3
+		
+
+
+		//ONES DIGIT
+	
+	//Top (segment 0)
+	else if (
+				~lb3_segment_ones[0] &&
+				ADDR/screenW <=(lb3_TopLeftOnes/screenW + segS_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftOnes/screenW) && 		//min Y
+				ADDR%screenW <=(lb3_TopLeftOnes%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb3_TopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Right (Segment 1)
+	else if (~lb3_segment_ones[1] &&
+				ADDR/screenW <=(lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftOnes/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftOnes%screenW + segL_lb + segGap_lb+ segS_lb) && 						//max X
+				ADDR%screenW >=(lb3_TopLeftOnes%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Right (Segment 2)
+	else if (~lb3_segment_ones[2] &&
+				ADDR/screenW <=(lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftOnes%screenW + segL_lb + segGap_lb+ segS_lb) && //max X
+				ADDR%screenW >=(lb3_TopLeftOnes%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Bottom (Segment 3)
+	else if (~lb3_segment_ones[3] &&
+				ADDR/screenW <=(lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb + segS_lb) && //max Y
+				ADDR/screenW >=(lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb) && //min Y
+				ADDR%screenW <=(lb3_TopLeftOnes%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb3_TopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Left (Segment 4)
+	else if (~lb3_segment_ones[4] &&
+				ADDR/screenW <=(lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftOnes%screenW + segS_lb) && //max X
+				ADDR%screenW >=(lb3_TopLeftOnes%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Left (Segment 5)
+	else if (~lb3_segment_ones[5] &&
+				ADDR/screenW <=(lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftOnes/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftOnes%screenW + segS_lb) && 	//max X
+				ADDR%screenW >=(lb3_TopLeftOnes%screenW )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Center (Segment 6)
+	else if (~lb3_segment_ones[6] &&
+				ADDR/screenW <=(lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb + segS_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftOnes/screenW + segS_lb + segGap_lb + segL_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftOnes%screenW + segL_lb) && 	//max X
+				ADDR%screenW >=(lb3_TopLeftOnes%screenW + segS_lb + segGap_lb )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+		
+		//Tens DIGIT
+	
+	//Top (segment 0)
+	else if (
+				~lb3_segment_tens[0] &&
+				ADDR/screenW <=(lb3_TopLeftTens/screenW + segS_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftTens/screenW) && 		//min Y
+				ADDR%screenW <=(lb3_TopLeftTens%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb3_TopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Right (Segment 1)
+	else if (~lb3_segment_tens[1] &&
+				ADDR/screenW <=(lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftTens/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftTens%screenW + segL_lb + segGap_lb+ segS_lb) && 						//max X
+				ADDR%screenW >=(lb3_TopLeftTens%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Right (Segment 2)
+	else if (~lb3_segment_tens[2] &&
+				ADDR/screenW <=(lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftTens%screenW + segL_lb + segGap_lb+ segS_lb) && //max X
+				ADDR%screenW >=(lb3_TopLeftTens%screenW + segL_lb + segGap_lb)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Bottom (Segment 3)
+	else if (~lb3_segment_tens[3] &&
+				ADDR/screenW <=(lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb + segS_lb) && //max Y
+				ADDR/screenW >=(lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb + segGap_lb) && //min Y
+				ADDR%screenW <=(lb3_TopLeftTens%screenW +segL_lb + segGap_lb + segS_lb) &&  //max X
+				ADDR%screenW >=(lb3_TopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Lower Left (Segment 4)
+	else if (~lb3_segment_tens[4] &&
+				ADDR/screenW <=(lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftTens%screenW + segS_lb) && //max X
+				ADDR%screenW >=(lb3_TopLeftTens%screenW)				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Upper Left (Segment 5)
+	else if (~lb3_segment_tens[5] &&
+				ADDR/screenW <=(lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftTens/screenW + segS_lb + segGap_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftTens%screenW + segS_lb) && 	//max X
+				ADDR%screenW >=(lb3_TopLeftTens%screenW )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+	//Center (Segment 6)
+	else if (~lb3_segment_tens[6] &&
+				ADDR/screenW <=(lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb + segS_lb) && //max Y
+				ADDR/screenW >= (lb3_TopLeftTens/screenW + segS_lb + segGap_lb + segL_lb) &&		//min Y
+				ADDR%screenW <=(lb3_TopLeftTens%screenW + segL_lb) && 	//max X
+				ADDR%screenW >=(lb3_TopLeftTens%screenW + segS_lb + segGap_lb )				//min X
+				)
+		begin
+			b_data = 8'h00;
+			g_data = 8'h00;
+			r_data = 8'h00;
+		end
+
+
+
 
 	
 	
 //Score
 
 	//ONES DIGIT
+	
 	//Top (segment 0)
 	else if (
 				~score_segment_ones[0] &&
@@ -211,7 +794,7 @@ end
 			r_data = 8'h00;
 		end
 		
-	//TENS DIGIT
+	//Tens DIGIT
 	//Top (segment 0)
 	else if (
 				~score_segment_tens[0] &&
@@ -385,7 +968,7 @@ end
 			r_data = 8'h00;
 		end
 
-	//TENS DIGIT
+	//Tens DIGIT
 		else if (
 				~time_segment_tens[0] &&
 				ADDR/screenW <=(timeTopLeftTens/screenW + segS) && //max Y
