@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for skeleton
-Tue Dec 03 20:36:43 2019
+Tue Dec 03 20:49:57 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -118,14 +118,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.68        ;
+; Average used               ; 1.65        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  25.8%      ;
-;     Processor 3            ;  21.8%      ;
-;     Processor 4            ;  20.5%      ;
+;     Processor 2            ;  24.8%      ;
+;     Processor 3            ;  20.9%      ;
+;     Processor 4            ;  19.7%      ;
 +----------------------------+-------------+
 
 
@@ -560,8 +560,6 @@ HTML report is unavailable in plain text report export.
 ; 0.657 ; vga_controller:vga_ins|counter[17]                            ; vga_controller:vga_ins|counter[17]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.922      ;
 ; 0.658 ; vga_controller:vga_ins|ADDR[9]                                ; vga_controller:vga_ins|ADDR[9]                                ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.923      ;
 ; 0.658 ; vga_controller:vga_ins|ADDR[1]                                ; vga_controller:vga_ins|ADDR[1]                                ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.080      ; 0.924      ;
-; 0.658 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[5]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[5]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.922      ;
-; 0.658 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[3]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[3]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.922      ;
 ; 0.658 ; vga_controller:vga_ins|counter[6]                             ; vga_controller:vga_ins|counter[6]                             ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.923      ;
 ; 0.658 ; vga_controller:vga_ins|counter[7]                             ; vga_controller:vga_ins|counter[7]                             ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.923      ;
 ; 0.658 ; vga_controller:vga_ins|counter[9]                             ; vga_controller:vga_ins|counter[9]                             ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.923      ;
@@ -573,23 +571,25 @@ HTML report is unavailable in plain text report export.
 ; 0.658 ; vga_controller:vga_ins|counter[51]                            ; vga_controller:vga_ins|counter[51]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.922      ;
 ; 0.658 ; vga_controller:vga_ins|counter[53]                            ; vga_controller:vga_ins|counter[53]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.922      ;
 ; 0.658 ; vga_controller:vga_ins|counter[61]                            ; vga_controller:vga_ins|counter[61]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.922      ;
+; 0.658 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[5]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[5]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.922      ;
+; 0.658 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[3]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[3]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.922      ;
 ; 0.659 ; vga_controller:vga_ins|ADDR[14]                               ; vga_controller:vga_ins|ADDR[14]                               ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.924      ;
 ; 0.659 ; vga_controller:vga_ins|ADDR[13]                               ; vga_controller:vga_ins|ADDR[13]                               ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.924      ;
 ; 0.659 ; vga_controller:vga_ins|ADDR[12]                               ; vga_controller:vga_ins|ADDR[12]                               ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.924      ;
-; 0.659 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[1]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[1]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.923      ;
 ; 0.659 ; vga_controller:vga_ins|counter[23]                            ; vga_controller:vga_ins|counter[23]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.924      ;
 ; 0.659 ; vga_controller:vga_ins|counter[25]                            ; vga_controller:vga_ins|counter[25]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.924      ;
 ; 0.659 ; vga_controller:vga_ins|counter[33]                            ; vga_controller:vga_ins|counter[33]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.077      ; 0.922      ;
 ; 0.659 ; vga_controller:vga_ins|counter[43]                            ; vga_controller:vga_ins|counter[43]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.077      ; 0.922      ;
 ; 0.659 ; vga_controller:vga_ins|counter[49]                            ; vga_controller:vga_ins|counter[49]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.923      ;
 ; 0.659 ; vga_controller:vga_ins|counter[59]                            ; vga_controller:vga_ins|counter[59]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.923      ;
-; 0.660 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[4]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[4]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.924      ;
-; 0.660 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[6]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[6]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.924      ;
+; 0.659 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[1]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[1]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.923      ;
 ; 0.660 ; vga_controller:vga_ins|counter[14]                            ; vga_controller:vga_ins|counter[14]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.925      ;
 ; 0.660 ; vga_controller:vga_ins|counter[16]                            ; vga_controller:vga_ins|counter[16]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.925      ;
 ; 0.660 ; vga_controller:vga_ins|counter[18]                            ; vga_controller:vga_ins|counter[18]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.925      ;
 ; 0.660 ; vga_controller:vga_ins|counter[54]                            ; vga_controller:vga_ins|counter[54]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.924      ;
 ; 0.660 ; vga_controller:vga_ins|counter[63]                            ; vga_controller:vga_ins|counter[63]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.924      ;
+; 0.660 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[4]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[4]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.924      ;
+; 0.660 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[6]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[6]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.924      ;
 ; 0.661 ; vga_controller:vga_ins|ADDR[10]                               ; vga_controller:vga_ins|ADDR[10]                               ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.926      ;
 ; 0.661 ; vga_controller:vga_ins|counter[55]                            ; vga_controller:vga_ins|counter[55]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.925      ;
 ; 0.661 ; vga_controller:vga_ins|counter[0]                             ; vga_controller:vga_ins|counter[0]                             ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.079      ; 0.926      ;
@@ -608,11 +608,11 @@ HTML report is unavailable in plain text report export.
 ; 0.662 ; vga_controller:vga_ins|counter[32]                            ; vga_controller:vga_ins|counter[32]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.077      ; 0.925      ;
 ; 0.662 ; vga_controller:vga_ins|counter[48]                            ; vga_controller:vga_ins|counter[48]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.926      ;
 ; 0.663 ; vga_controller:vga_ins|ADDR[6]                                ; vga_controller:vga_ins|ADDR[6]                                ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.080      ; 0.929      ;
-; 0.663 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[4]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[4]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.927      ;
 ; 0.663 ; vga_controller:vga_ins|counter[52]                            ; vga_controller:vga_ins|counter[52]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.927      ;
 ; 0.663 ; vga_controller:vga_ins|counter[34]                            ; vga_controller:vga_ins|counter[34]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.077      ; 0.926      ;
 ; 0.663 ; vga_controller:vga_ins|counter[46]                            ; vga_controller:vga_ins|counter[46]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.077      ; 0.926      ;
 ; 0.663 ; vga_controller:vga_ins|counter[50]                            ; vga_controller:vga_ins|counter[50]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.927      ;
+; 0.663 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[4]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[4]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.078      ; 0.927      ;
 ; 0.664 ; vga_controller:vga_ins|counter[36]                            ; vga_controller:vga_ins|counter[36]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.077      ; 0.927      ;
 ; 0.664 ; vga_controller:vga_ins|counter[40]                            ; vga_controller:vga_ins|counter[40]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.077      ; 0.927      ;
 ; 0.664 ; vga_controller:vga_ins|counter[42]                            ; vga_controller:vga_ins|counter[42]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.077      ; 0.927      ;
@@ -4372,7 +4372,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Dec 03 20:36:37 2019
+    Info: Processing started: Tue Dec 03 20:49:51 2019
 Info: Command: quartus_sta skeleton -c skeleton
 Info: qsta_default_script.tcl version: #3
 Warning (136023): Incompatible bus dimensions on node name "score[0]", expecting <= 0 dimension(s)  File: C:/Users/rt125/Documents/final-project-350/skeleton.v Line: 206
@@ -4486,8 +4486,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 11 warnings
     Info: Peak virtual memory: 4938 megabytes
-    Info: Processing ended: Tue Dec 03 20:36:43 2019
+    Info: Processing ended: Tue Dec 03 20:49:57 2019
     Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 
