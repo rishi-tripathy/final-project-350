@@ -752,6 +752,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "gameModeSwitch",
+					"strict" : false
+				},
+				{
 					"name" : "inSwitch0",
 					"strict" : false
 				},

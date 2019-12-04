@@ -16,7 +16,7 @@ module skeleton(reset,
 	mLeft,
 	mRight,
 	mUp,
-	mDown, indicator, sampled, timer, dc,
+	mDown, indicator, sampled, timer, dc, gameModeSwitch,
 	dataaa, reg5,
 	CLOCK_50, div_clk, div_clk_counter, clock);  													// 50 MHz clock
 		
@@ -44,7 +44,7 @@ module skeleton(reset,
 	
 	
 	output indicator;
-	
+	input gameModeSwitch;
 	
 	output			 clock;
 	wire			 lcd_write_en;
@@ -100,8 +100,19 @@ module skeleton(reset,
 	wire score_count_en;
 	and a0(score_count_en, ~diff[0], ~diff[1], ~diff[2], ~diff[3], ~diff[4], ~diff[5], ~diff[6], ~diff[7]);
 	
+	wire score_count_mode1_en;
+	assign score_count_mode1_en = (score_count == end_score) ? 1 : 0;
+	
+	wire scoreEnable;
+	assign scoreEnable = gameMode ? (~score_count_mode1_en) : (~score_count_en);
+	
+	wire [7:0] lb1, lb2, lb3;
+	assign lb1 = gameMode ? time1 : score1;
+	assign lb2 = gameMode ? time2 : score2;
+	assign lb3 = gameMode ? time3 : score3;
+	
 	//switch from hoop
-	finalproject_b cont(score_seg_ones, score_seg_tens, lb1_seg_ones, lb1_seg_tens,lb2_seg_ones, lb2_seg_tens, lb3_seg_ones, lb3_seg_tens, inSwitch0, inSwitch1, inSwitch2, score1, score2, score3, clock, score_count, ~score_count_en, ~reset);
+	finalproject_b cont(score_seg_ones, score_seg_tens, lb1_seg_ones, lb1_seg_tens,lb2_seg_ones, lb2_seg_tens, lb3_seg_ones, lb3_seg_tens, inSwitch0, inSwitch1, inSwitch2, lb1, lb22, lb3, clock, score_count, scoreEnable, ~reset);
 	
 	
 	// example for sending ps2 data to the first two seven segment displays
@@ -130,12 +141,19 @@ module skeleton(reset,
 	//reg game_over;
 	reg enA, hold;
 	
+	reg gameMode;
+	
+	initial begin
+		gameMode <= gameModeSwitch;
+	end
+	
 	always @(posedge clock)
 		begin
 			timer <= timer + 32'b1;
 			if (reset == 0) begin
 				curr_time_reg <= 8'b0;
 				hold <= 0;
+				gameMode <= gameModeSwitch;
 			end
 			if (yup)
 			begin
@@ -151,7 +169,7 @@ module skeleton(reset,
 			div_clk_counter <= 32'b0;
 			end
 			
-			if (div_clk && curr_time_reg < start_time)
+			if (div_clk && curr_time_reg < start_time && !((score_count == end_score && gameMode == 1)))
 			begin
 			curr_time_reg <= curr_time_reg + 1;
 			end
@@ -162,7 +180,7 @@ module skeleton(reset,
 				//div_clk_counter <= 32'b0;
 				//curr_time_reg <= curr_time_reg + 1;
 			end
-			if (diff == 'b0 && hold==0) begin
+			if (((diff == 8'b0 && gameMode == 0) || (score_count == end_score && gameMode == 1)) && hold==0) begin
 				enA <= 1;
 				hold <= 1;
 			end
@@ -177,21 +195,30 @@ module skeleton(reset,
 //			curr_time <= 8'b0;
 //	end
 	
-	wire [7:0] score1, score2, score3;
+	wire [7:0] score1, score2, score3, time1, time2, time3;
 	//curr_time == 0 acts as enable for leaderboard updates
 	//output top three scores
-	leaderboard l(clock, enA, score_count, user_id, score1, score2, score3, id1, id2, id3, indicator);
+	
+	wire scoreLeaderBoardEn, timeLeaderBoardEn;
+	and scand(scoreLeaderBoardEn, enA, ~gameMode);
+	and scand1(timeLeaderBoardEn, enA, gameMode);
+	
+	leaderboard score(clock, scoreLeaderBoardEn, score_count, user_id, score1, score2, score3, id1, id2, id3, indicator);
+	leaderboard times(clock, timeLeaderBoardEn, curr_time_reg, user_id1, time1, time2, time3, id01, id02, id03, ignore);
 	
 	Hexadecimal_To_Seven_Segment yo(score1[3:0], seg1);
 	
-	wire [7:0] start_time, diff;
+	wire [7:0] start_time, diff, display_time, end_score;
 	assign start_time = 8'd30;
+	assign end_score = 8'd10;
 	assign diff = start_time - curr_time_reg;
+	assign display_time = gameMode ? curr_time_reg : diff;
+	
 	Hexadecimal_To_Seven_Segment h(diff[3:0], curr_t);
 	Hexadecimal_To_Seven_Segment yo2(score2[3:0], seg3);
 	Hexadecimal_To_Seven_Segment yo3(score3[3:0], seg4);
-	Decimal_To_Seven_Segment yo4(CLOCK_50, diff, time_seg_ones, time_seg_tens);
-	Hexadecimal_To_Seven_Segment hex5(diff, seg5);
+	Decimal_To_Seven_Segment yo4(CLOCK_50, display_time, time_seg_ones, time_seg_tens);
+	Hexadecimal_To_Seven_Segment hex5(display_time, seg5);
 	
 		
 	// VGA

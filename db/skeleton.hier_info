@@ -9,6 +9,7 @@ reset => curr_time_reg.OUTPUTSELECT
 reset => curr_time_reg.OUTPUTSELECT
 reset => curr_time_reg.OUTPUTSELECT
 reset => hold.OUTPUTSELECT
+reset => gameMode.ENA
 ps2_clock <> <UNC>
 ps2_data <> <UNC>
 debug_data_in[0] <= <GND>
@@ -189,7 +190,7 @@ mLeft => mLeft.IN1
 mRight => mRight.IN1
 mUp => mUp.IN1
 mDown => mDown.IN1
-indicator <= leaderboard:l.port10
+indicator <= leaderboard:score.port10
 sampled <= a5.DB_MAX_OUTPUT_PORT_TYPE
 timer[0] <= timer[0].DB_MAX_OUTPUT_PORT_TYPE
 timer[1] <= timer[1].DB_MAX_OUTPUT_PORT_TYPE
@@ -255,6 +256,7 @@ dc[28] <= processor_init:comb_4.port6
 dc[29] <= processor_init:comb_4.port6
 dc[30] <= processor_init:comb_4.port6
 dc[31] <= processor_init:comb_4.port6
+gameModeSwitch => gameMode.DATAIN
 dataaa[0] <= processor_init:comb_4.port3
 dataaa[1] <= <GND>
 dataaa[2] <= <GND>
@@ -288,7 +290,7 @@ dataaa[29] <= <GND>
 dataaa[30] <= <GND>
 dataaa[31] <= <GND>
 reg5 <= processor_init:comb_4.port5
-CLOCK_50 => clock.IN7
+CLOCK_50 => clock.IN8
 div_clk <= div_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
 div_clk_counter[0] <= div_clk_counter[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 div_clk_counter[1] <= div_clk_counter[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -13792,7 +13794,7 @@ seven_seg_display[5] <= seven_seg_display.DB_MAX_OUTPUT_PORT_TYPE
 seven_seg_display[6] <= seven_seg_display.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|skeleton|leaderboard:l
+|skeleton|leaderboard:score
 clk => clk.IN24
 enA => o1.IN1
 enA => o2.IN1
@@ -13838,7 +13840,7 @@ id3 <= <GND>
 enOut <= score_count[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|skeleton|leaderboard:l|dffe_ref:dff0a
+|skeleton|leaderboard:score|dffe_ref:dff0a
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13846,7 +13848,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff1a
+|skeleton|leaderboard:score|dffe_ref:dff1a
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13854,7 +13856,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff2a
+|skeleton|leaderboard:score|dffe_ref:dff2a
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13862,7 +13864,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff3a
+|skeleton|leaderboard:score|dffe_ref:dff3a
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13870,7 +13872,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff4a
+|skeleton|leaderboard:score|dffe_ref:dff4a
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13878,7 +13880,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff5a
+|skeleton|leaderboard:score|dffe_ref:dff5a
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13886,7 +13888,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff6a
+|skeleton|leaderboard:score|dffe_ref:dff6a
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13894,7 +13896,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff7a
+|skeleton|leaderboard:score|dffe_ref:dff7a
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13902,7 +13904,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff0b
+|skeleton|leaderboard:score|dffe_ref:dff0b
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13910,7 +13912,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff1b
+|skeleton|leaderboard:score|dffe_ref:dff1b
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13918,7 +13920,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff2b
+|skeleton|leaderboard:score|dffe_ref:dff2b
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13926,7 +13928,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff3b
+|skeleton|leaderboard:score|dffe_ref:dff3b
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13934,7 +13936,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff4b
+|skeleton|leaderboard:score|dffe_ref:dff4b
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13942,7 +13944,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff5b
+|skeleton|leaderboard:score|dffe_ref:dff5b
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13950,7 +13952,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff6b
+|skeleton|leaderboard:score|dffe_ref:dff6b
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13958,7 +13960,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff7b
+|skeleton|leaderboard:score|dffe_ref:dff7b
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13966,7 +13968,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff0c
+|skeleton|leaderboard:score|dffe_ref:dff0c
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13974,7 +13976,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff1c
+|skeleton|leaderboard:score|dffe_ref:dff1c
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13982,7 +13984,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff2c
+|skeleton|leaderboard:score|dffe_ref:dff2c
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13990,7 +13992,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff3c
+|skeleton|leaderboard:score|dffe_ref:dff3c
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -13998,7 +14000,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff4c
+|skeleton|leaderboard:score|dffe_ref:dff4c
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -14006,7 +14008,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff5c
+|skeleton|leaderboard:score|dffe_ref:dff5c
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -14014,7 +14016,7 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff6c
+|skeleton|leaderboard:score|dffe_ref:dff6c
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
@@ -14022,7 +14024,245 @@ en => q~reg0.ENA
 clr => q~reg0.ACLR
 
 
-|skeleton|leaderboard:l|dffe_ref:dff7c
+|skeleton|leaderboard:score|dffe_ref:dff7c
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times
+clk => clk.IN24
+enA => o1.IN1
+enA => o2.IN1
+enA => o3.IN1
+score_count[0] => score_count[0].IN1
+score_count[1] => score_count[1].IN1
+score_count[2] => score_count[2].IN1
+score_count[3] => score_count[3].IN1
+score_count[4] => score_count[4].IN1
+score_count[5] => score_count[5].IN1
+score_count[6] => score_count[6].IN1
+score_count[7] => score_count[7].IN1
+user_id[0] => ~NO_FANOUT~
+user_id[1] => ~NO_FANOUT~
+user_id[2] => ~NO_FANOUT~
+score1[0] <= dffe_ref:dff0a.q
+score1[1] <= dffe_ref:dff1a.q
+score1[2] <= dffe_ref:dff2a.q
+score1[3] <= dffe_ref:dff3a.q
+score1[4] <= dffe_ref:dff4a.q
+score1[5] <= dffe_ref:dff5a.q
+score1[6] <= dffe_ref:dff6a.q
+score1[7] <= dffe_ref:dff7a.q
+score2[0] <= dffe_ref:dff0b.q
+score2[1] <= dffe_ref:dff1b.q
+score2[2] <= dffe_ref:dff2b.q
+score2[3] <= dffe_ref:dff3b.q
+score2[4] <= dffe_ref:dff4b.q
+score2[5] <= dffe_ref:dff5b.q
+score2[6] <= dffe_ref:dff6b.q
+score2[7] <= dffe_ref:dff7b.q
+score3[0] <= dffe_ref:dff0c.q
+score3[1] <= dffe_ref:dff1c.q
+score3[2] <= dffe_ref:dff2c.q
+score3[3] <= dffe_ref:dff3c.q
+score3[4] <= dffe_ref:dff4c.q
+score3[5] <= dffe_ref:dff5c.q
+score3[6] <= dffe_ref:dff6c.q
+score3[7] <= dffe_ref:dff7c.q
+id1 <= <GND>
+id2 <= <GND>
+id3 <= <GND>
+enOut <= score_count[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|skeleton|leaderboard:times|dffe_ref:dff0a
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff1a
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff2a
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff3a
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff4a
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff5a
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff6a
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff7a
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff0b
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff1b
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff2b
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff3b
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff4b
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff5b
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff6b
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff7b
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff0c
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff1c
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff2c
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff3c
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff4c
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff5c
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff6c
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+d => q~reg0.DATAIN
+clk => q~reg0.CLK
+en => q~reg0.ENA
+clr => q~reg0.ACLR
+
+
+|skeleton|leaderboard:times|dffe_ref:dff7c
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 d => q~reg0.DATAIN
 clk => q~reg0.CLK
