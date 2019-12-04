@@ -141,11 +141,11 @@ module skeleton(reset,
 			begin
 			div_clk_counter <= div_clk_counter + 32'b1;
 			end
-			if (div_clk_counter<32'd1000000)
+			if (div_clk_counter<32'd3300000)
 			begin
 			div_clk <= 1'b0;
 			end
-			else if (div_clk_counter>32'd1000000)
+			else if (div_clk_counter>32'd3300000)
 			begin
 			div_clk <= 1'b1;
 			div_clk_counter <= 32'b0;
