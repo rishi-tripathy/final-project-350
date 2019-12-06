@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for skeleton
-Fri Dec 06 13:41:44 2019
+Fri Dec 06 13:50:25 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -118,14 +118,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.48        ;
+; Average used               ; 1.61        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  18.7%      ;
-;     Processor 3            ;  15.0%      ;
-;     Processor 4            ;  14.3%      ;
+;     Processor 2            ;  22.7%      ;
+;     Processor 3            ;  19.8%      ;
+;     Processor 4            ;  18.2%      ;
 +----------------------------+-------------+
 
 
@@ -1238,13 +1238,14 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                                                                       ; To Node                                                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
-; 0.355 ; processor_init:comb_4|regfile:my_regfile|registers[1][0]                                        ; processor_init:comb_4|regfile:my_regfile|registers[1][0]                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; processor_init:comb_4|regfile:my_regfile|registers[5][0]                                        ; processor_init:comb_4|regfile:my_regfile|registers[5][0]                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|busy             ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|busy             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
 ; 0.355 ; enA                                                                                             ; enA                                                                                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
 ; 0.355 ; hold                                                                                            ; hold                                                                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
 ; 0.355 ; div_clk_counter[20]~reg0                                                                        ; div_clk_counter[20]~reg0                                                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
 ; 0.355 ; div_clk_counter[21]~reg0                                                                        ; div_clk_counter[21]~reg0                                                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
+; 0.355 ; processor_init:comb_4|regfile:my_regfile|registers[1][0]                                        ; processor_init:comb_4|regfile:my_regfile|registers[1][0]                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
+; 0.355 ; processor_init:comb_4|regfile:my_regfile|registers[5][0]                                        ; processor_init:comb_4|regfile:my_regfile|registers[5][0]                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
+; 0.355 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|busy             ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|busy             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
+; 0.356 ; gameMode                                                                                        ; gameMode                                                                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[32]        ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[32]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[4]         ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[4]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[3]         ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[3]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
@@ -1252,7 +1253,6 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[0]         ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[0]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[63]        ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[63]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[0]         ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[0]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
-; 0.356 ; gameMode                                                                                        ; gameMode                                                                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.365 ; Reset_Delay:r0|Cont[0]                                                                          ; Reset_Delay:r0|Cont[0]                                                                          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.608      ;
 ; 0.383 ; hold                                                                                            ; enA                                                                                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.625      ;
 ; 0.386 ; Reset_Delay:r0|Cont[19]                                                                         ; Reset_Delay:r0|Cont[19]                                                                         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 0.630      ;
@@ -4372,7 +4372,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Fri Dec 06 13:41:37 2019
+    Info: Processing started: Fri Dec 06 13:50:19 2019
 Info: Command: quartus_sta skeleton -c skeleton
 Info: qsta_default_script.tcl version: #3
 Warning (136023): Incompatible bus dimensions on node name "score[0]", expecting <= 0 dimension(s)  File: C:/Users/rt125/demo/final-project-350/skeleton.v Line: 206
@@ -4485,9 +4485,9 @@ Info (332146): Worst-case minimum pulse width slack is 9.377
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4943 megabytes
-    Info: Processing ended: Fri Dec 06 13:41:44 2019
-    Info: Elapsed time: 00:00:07
+    Info: Peak virtual memory: 4940 megabytes
+    Info: Processing ended: Fri Dec 06 13:50:25 2019
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 
 
