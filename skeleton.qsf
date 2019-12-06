@@ -165,6 +165,8 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_G19 -to sampled
 set_location_assignment PIN_AB28 -to gameModeSwitch
+set_global_assignment -name MIF_FILE file2sw.mif
+set_global_assignment -name MIF_FILE file1sw.mif
 set_global_assignment -name MIF_FILE file2.mif
 set_global_assignment -name MIF_FILE file1.mif
 set_global_assignment -name MIF_FILE counterMips.mif

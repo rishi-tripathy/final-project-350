@@ -19,7 +19,8 @@ module vga_controller(iRST_n,
 							 mLeft,
 							 mRight,
 							 mUp,
-							 mDown);
+							 mDown,
+							 make);
 							 
 localparam screenW = 640,
 segL = 60,
@@ -49,7 +50,7 @@ input[6:0] 				 time_segment_ones,
 	
 input iRST_n;
 input iVGA_CLK;
-input mLeft, mRight, mUp, mDown;
+input mLeft, mRight, mUp, mDown, make;
 output reg oBLANK_n;
 output reg oHS;
 output reg oVS;
@@ -58,10 +59,11 @@ output [7:0] g_data;
 output [7:0] r_data;                        
 ///////// ////
 reg [18:0] topLeft = 680;
-reg [18:0] scoreTopLeftTens =  9910;
-reg [18:0] scoreTopLeftOnes = 10000;
-reg [18:0] timeTopLeftTens = 137910;
-reg [18:0] timeTopLeftOnes = 138000;
+
+reg [18:0] scoreTopLeftTens =  9990;
+reg [18:0] scoreTopLeftOnes = 10080;
+reg [18:0] timeTopLeftTens = 137990;
+reg [18:0] timeTopLeftOnes = 138080;
 
 
 reg [18:0] lb1_TopLeftTens =  3210;
@@ -73,6 +75,8 @@ reg [18:0] lb2_TopLeftOnes = 54455;
 reg [18:0] lb3_TopLeftTens = 105610;
 reg [18:0] lb3_TopLeftOnes = 105655;
 
+
+reg[18:0] sw_TopLeft = 160000;
 
 
 
@@ -112,7 +116,8 @@ assign VGA_CLK_n = ~iVGA_CLK;
 img_data	img_data_inst (
 	.address ( ADDR ),
 	.clock ( VGA_CLK_n ),
-	.q ( index )
+	.q ( index ),
+	.swish (make),
 	);
 	
 /////////////////////////
@@ -122,12 +127,19 @@ img_data	img_data_inst (
 img_index	img_index_inst (
 	.address ( index ),
 	.clock ( iVGA_CLK ),
-	.q ( bgr_data_raw)
+	.q ( bgr_data_raw),
+	.swish (make),
 	);	
+	
+	
+
+
+
 //////
 //////latch valid data at falling edge;
 always@(posedge VGA_CLK_n) begin//, posedge mUp, posedge mDown, posedge mRight, posedge mLeft) begin 
 bgr_data <= bgr_data_raw;
+
 
 counter <= counter  + 1;
 //
@@ -175,7 +187,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~lb1_segment_ones[1] &&
@@ -187,7 +199,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~lb1_segment_ones[2] &&
@@ -199,7 +211,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~lb1_segment_ones[3] &&
@@ -211,7 +223,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~lb1_segment_ones[4] &&
@@ -223,7 +235,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~lb1_segment_ones[5] &&
@@ -235,7 +247,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~lb1_segment_ones[6] &&
@@ -247,7 +259,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 		
 		//Tens DIGIT
@@ -263,7 +275,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~lb1_segment_tens[1] &&
@@ -275,7 +287,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~lb1_segment_tens[2] &&
@@ -287,7 +299,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~lb1_segment_tens[3] &&
@@ -299,7 +311,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~lb1_segment_tens[4] &&
@@ -311,7 +323,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~lb1_segment_tens[5] &&
@@ -323,7 +335,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~lb1_segment_tens[6] &&
@@ -335,7 +347,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 
    //LB2
@@ -355,7 +367,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~lb2_segment_ones[1] &&
@@ -367,7 +379,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~lb2_segment_ones[2] &&
@@ -379,7 +391,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~lb2_segment_ones[3] &&
@@ -391,7 +403,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~lb2_segment_ones[4] &&
@@ -403,7 +415,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~lb2_segment_ones[5] &&
@@ -415,7 +427,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~lb2_segment_ones[6] &&
@@ -427,7 +439,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 		
 		//Tens DIGIT
@@ -443,7 +455,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~lb2_segment_tens[1] &&
@@ -455,7 +467,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~lb2_segment_tens[2] &&
@@ -467,7 +479,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~lb2_segment_tens[3] &&
@@ -479,7 +491,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~lb2_segment_tens[4] &&
@@ -491,7 +503,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~lb2_segment_tens[5] &&
@@ -503,7 +515,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~lb2_segment_tens[6] &&
@@ -515,7 +527,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 
 		
@@ -536,7 +548,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~lb3_segment_ones[1] &&
@@ -548,7 +560,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~lb3_segment_ones[2] &&
@@ -560,7 +572,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~lb3_segment_ones[3] &&
@@ -572,7 +584,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~lb3_segment_ones[4] &&
@@ -584,7 +596,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~lb3_segment_ones[5] &&
@@ -596,7 +608,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~lb3_segment_ones[6] &&
@@ -608,7 +620,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 		
 		//Tens DIGIT
@@ -624,7 +636,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~lb3_segment_tens[1] &&
@@ -636,7 +648,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~lb3_segment_tens[2] &&
@@ -648,7 +660,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~lb3_segment_tens[3] &&
@@ -660,7 +672,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~lb3_segment_tens[4] &&
@@ -672,7 +684,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~lb3_segment_tens[5] &&
@@ -684,7 +696,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~lb3_segment_tens[6] &&
@@ -696,7 +708,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 
 
@@ -719,7 +731,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~score_segment_ones[1] &&
@@ -731,7 +743,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~score_segment_ones[2] &&
@@ -743,7 +755,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~score_segment_ones[3] &&
@@ -755,7 +767,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~score_segment_ones[4] &&
@@ -767,7 +779,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~score_segment_ones[5] &&
@@ -779,7 +791,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~score_segment_ones[6] &&
@@ -791,7 +803,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 		
 	//Tens DIGIT
@@ -806,7 +818,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~score_segment_tens[1] &&
@@ -818,7 +830,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~score_segment_tens[2] &&
@@ -830,7 +842,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~score_segment_tens[3] &&
@@ -842,7 +854,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~score_segment_tens[4] &&
@@ -854,7 +866,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~score_segment_tens[5] &&
@@ -866,7 +878,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~score_segment_tens[6] &&
@@ -878,7 +890,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 
 //Time
@@ -893,7 +905,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~time_segment_ones[1] &&
@@ -905,7 +917,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~time_segment_ones[2] &&
@@ -917,7 +929,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~time_segment_ones[3] &&
@@ -929,7 +941,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~time_segment_ones[4] &&
@@ -941,7 +953,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~time_segment_ones[5] &&
@@ -953,7 +965,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~time_segment_ones[6] &&
@@ -965,7 +977,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 
 	//Tens DIGIT
@@ -979,7 +991,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Right (Segment 1)
 	else if (~time_segment_tens[1] &&
@@ -991,7 +1003,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Right (Segment 2)
 	else if (~time_segment_tens[2] &&
@@ -1003,7 +1015,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Bottom (Segment 3)
 	else if (~time_segment_tens[3] &&
@@ -1015,7 +1027,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Lower Left (Segment 4)
 	else if (~time_segment_tens[4] &&
@@ -1027,7 +1039,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Upper Left (Segment 5)
 	else if (~time_segment_tens[5] &&
@@ -1039,7 +1051,7 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 	//Center (Segment 6)
 	else if (~time_segment_tens[6] &&
@@ -1051,17 +1063,9 @@ end
 		begin
 			b_data = 8'h00;
 			g_data = 8'h00;
-			r_data = 8'h00;
+			r_data = 8'hFF;
 		end
 
-		
-	
-	
-
-
-
-
-	
 else
 	begin
 		b_data = bgr_data[23:16];

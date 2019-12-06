@@ -112,7 +112,8 @@ module skeleton(reset,
 	assign lb3 = gameMode ? time3 : score3;
 	
 	//switch from hoop
-	finalproject_b cont(score_seg_ones, score_seg_tens, lb1_seg_ones, lb1_seg_tens,lb2_seg_ones, lb2_seg_tens, lb3_seg_ones, lb3_seg_tens, inSwitch0, inSwitch1, inSwitch2, lb1, lb22, lb3, clock, score_count, scoreEnable, ~reset);
+	wire make;
+	finalproject_b cont(score_seg_ones, score_seg_tens, lb1_seg_ones, lb1_seg_tens,lb2_seg_ones, lb2_seg_tens, lb3_seg_ones, lb3_seg_tens, inSwitch0, inSwitch1, inSwitch2, lb1, lb22, lb3, clock, score_count, scoreEnable, ~reset, make);
 	
 	
 	// example for sending ps2 data to the first two seven segment displays
@@ -159,11 +160,11 @@ module skeleton(reset,
 			begin
 			div_clk_counter <= div_clk_counter + 32'b1;
 			end
-			if (div_clk_counter<32'd3300000)
+			if (div_clk_counter<32'd3750000)
 			begin
 			div_clk <= 1'b0;
 			end
-			else if (div_clk_counter>32'd3300000)
+			else if (div_clk_counter>32'd3750000)
 			begin
 			div_clk <= 1'b1;
 			div_clk_counter <= 32'b0;
@@ -245,7 +246,8 @@ module skeleton(reset,
 								 .mLeft(mLeft),
 								 .mRight(mRight),
 								 .mUp(mUp),
-								 .mDown(mDown));
+								 .mDown(mDown),
+								 .make(make));
 								 
 	
 endmodule

@@ -39,10 +39,11 @@
 module img_data (
 	address,
 	clock,
-	q);
+	q,
+	swish);
 
 	input	[18:0]  address;
-	input	  clock;
+	input	  clock, swish;
 	output	[7:0]  q;
 `ifndef ALTERA_RESERVED_QIS
 // synopsys translate_off
@@ -83,7 +84,7 @@ module img_data (
 		altsyncram_component.address_aclr_a = "NONE",
 		altsyncram_component.clock_enable_input_a = "BYPASS",
 		altsyncram_component.clock_enable_output_a = "BYPASS",
-		altsyncram_component.init_file = "file1.mif",
+		altsyncram_component.init_file = "file1sw.mif",
 		altsyncram_component.intended_device_family = "Cyclone IV E",
 		altsyncram_component.lpm_hint = "ENABLE_RUNTIME_MOD=NO",
 		altsyncram_component.lpm_type = "altsyncram",
