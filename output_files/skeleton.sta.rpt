@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for skeleton
-Tue Dec 03 20:36:43 2019
+Fri Dec 06 13:41:44 2019
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -118,14 +118,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.68        ;
+; Average used               ; 1.48        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  25.8%      ;
-;     Processor 3            ;  21.8%      ;
-;     Processor 4            ;  20.5%      ;
+;     Processor 2            ;  18.7%      ;
+;     Processor 3            ;  15.0%      ;
+;     Processor 4            ;  14.3%      ;
 +----------------------------+-------------+
 
 
@@ -1238,14 +1238,13 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------+-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                                                                                       ; To Node                                                                                         ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+-------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.355 ; processor_init:comb_4|regfile:my_regfile|registers[1][0]                                        ; processor_init:comb_4|regfile:my_regfile|registers[1][0]                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
+; 0.355 ; processor_init:comb_4|regfile:my_regfile|registers[5][0]                                        ; processor_init:comb_4|regfile:my_regfile|registers[5][0]                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
+; 0.355 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|busy             ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|busy             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
 ; 0.355 ; enA                                                                                             ; enA                                                                                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
 ; 0.355 ; hold                                                                                            ; hold                                                                                            ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
 ; 0.355 ; div_clk_counter[20]~reg0                                                                        ; div_clk_counter[20]~reg0                                                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
 ; 0.355 ; div_clk_counter[21]~reg0                                                                        ; div_clk_counter[21]~reg0                                                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; processor_init:comb_4|regfile:my_regfile|registers[1][0]                                        ; processor_init:comb_4|regfile:my_regfile|registers[1][0]                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; processor_init:comb_4|regfile:my_regfile|registers[5][0]                                        ; processor_init:comb_4|regfile:my_regfile|registers[5][0]                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
-; 0.355 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|busy             ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|busy             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.597      ;
-; 0.356 ; gameMode                                                                                        ; gameMode                                                                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[32]        ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[32]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[4]         ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[4]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[3]         ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[3]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
@@ -1253,6 +1252,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[0]         ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|divider:div|count[0]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[63]        ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[63]        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.356 ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[0]         ; processor_init:comb_4|processor:my_processor|execute:x|multdiv:md0|multiplier:mult|P[0]         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
+; 0.356 ; gameMode                                                                                        ; gameMode                                                                                        ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.070      ; 0.597      ;
 ; 0.365 ; Reset_Delay:r0|Cont[0]                                                                          ; Reset_Delay:r0|Cont[0]                                                                          ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.072      ; 0.608      ;
 ; 0.383 ; hold                                                                                            ; enA                                                                                             ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.071      ; 0.625      ;
 ; 0.386 ; Reset_Delay:r0|Cont[19]                                                                         ; Reset_Delay:r0|Cont[19]                                                                         ; CLOCK_50     ; CLOCK_50    ; 0.000        ; 0.073      ; 0.630      ;
@@ -1364,7 +1364,6 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.597 ; vga_controller:vga_ins|counter[31]                            ; vga_controller:vga_ins|counter[31]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.840      ;
 ; 0.598 ; vga_controller:vga_ins|ADDR[14]                               ; vga_controller:vga_ins|ADDR[14]                               ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.074      ; 0.843      ;
 ; 0.598 ; vga_controller:vga_ins|ADDR[12]                               ; vga_controller:vga_ins|ADDR[12]                               ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.074      ; 0.843      ;
-; 0.598 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[3]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[3]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.073      ; 0.842      ;
 ; 0.598 ; vga_controller:vga_ins|counter[11]                            ; vga_controller:vga_ins|counter[11]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.841      ;
 ; 0.598 ; vga_controller:vga_ins|counter[19]                            ; vga_controller:vga_ins|counter[19]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.841      ;
 ; 0.598 ; vga_controller:vga_ins|counter[21]                            ; vga_controller:vga_ins|counter[21]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.841      ;
@@ -1373,6 +1372,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.598 ; vga_controller:vga_ins|counter[35]                            ; vga_controller:vga_ins|counter[35]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.841      ;
 ; 0.598 ; vga_controller:vga_ins|counter[45]                            ; vga_controller:vga_ins|counter[45]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.841      ;
 ; 0.598 ; vga_controller:vga_ins|counter[47]                            ; vga_controller:vga_ins|counter[47]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.841      ;
+; 0.598 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[3]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[3]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.073      ; 0.842      ;
 ; 0.599 ; vga_controller:vga_ins|ADDR[9]                                ; vga_controller:vga_ins|ADDR[9]                                ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.074      ; 0.844      ;
 ; 0.599 ; vga_controller:vga_ins|ADDR[7]                                ; vga_controller:vga_ins|ADDR[7]                                ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.074      ; 0.844      ;
 ; 0.599 ; vga_controller:vga_ins|counter[6]                             ; vga_controller:vga_ins|counter[6]                             ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.842      ;
@@ -1384,18 +1384,18 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.599 ; vga_controller:vga_ins|counter[61]                            ; vga_controller:vga_ins|counter[61]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.842      ;
 ; 0.600 ; vga_controller:vga_ins|ADDR[13]                               ; vga_controller:vga_ins|ADDR[13]                               ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.074      ; 0.845      ;
 ; 0.600 ; vga_controller:vga_ins|ADDR[1]                                ; vga_controller:vga_ins|ADDR[1]                                ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.074      ; 0.845      ;
-; 0.600 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[5]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[5]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.071      ; 0.842      ;
-; 0.600 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[6]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[6]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.073      ; 0.844      ;
 ; 0.600 ; vga_controller:vga_ins|counter[17]                            ; vga_controller:vga_ins|counter[17]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.843      ;
 ; 0.600 ; vga_controller:vga_ins|counter[38]                            ; vga_controller:vga_ins|counter[38]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.843      ;
 ; 0.600 ; vga_controller:vga_ins|counter[59]                            ; vga_controller:vga_ins|counter[59]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.843      ;
 ; 0.600 ; vga_controller:vga_ins|counter[63]                            ; vga_controller:vga_ins|counter[63]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.843      ;
+; 0.600 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[5]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[5]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.071      ; 0.842      ;
+; 0.600 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[6]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[6]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.073      ; 0.844      ;
 ; 0.601 ; vga_controller:vga_ins|ADDR[10]                               ; vga_controller:vga_ins|ADDR[10]                               ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.074      ; 0.846      ;
-; 0.601 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[4]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[4]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.071      ; 0.843      ;
 ; 0.601 ; vga_controller:vga_ins|counter[9]                             ; vga_controller:vga_ins|counter[9]                             ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.844      ;
 ; 0.601 ; vga_controller:vga_ins|counter[33]                            ; vga_controller:vga_ins|counter[33]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.844      ;
 ; 0.601 ; vga_controller:vga_ins|counter[49]                            ; vga_controller:vga_ins|counter[49]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.844      ;
 ; 0.601 ; vga_controller:vga_ins|counter[54]                            ; vga_controller:vga_ins|counter[54]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.844      ;
+; 0.601 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[4]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[4]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.071      ; 0.843      ;
 ; 0.602 ; vga_controller:vga_ins|counter[7]                             ; vga_controller:vga_ins|counter[7]                             ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.845      ;
 ; 0.602 ; vga_controller:vga_ins|counter[14]                            ; vga_controller:vga_ins|counter[14]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.845      ;
 ; 0.602 ; vga_controller:vga_ins|counter[16]                            ; vga_controller:vga_ins|counter[16]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.845      ;
@@ -1405,8 +1405,6 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.602 ; vga_controller:vga_ins|counter[39]                            ; vga_controller:vga_ins|counter[39]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.845      ;
 ; 0.602 ; vga_controller:vga_ins|counter[41]                            ; vga_controller:vga_ins|counter[41]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.845      ;
 ; 0.603 ; vga_controller:vga_ins|ADDR[6]                                ; vga_controller:vga_ins|ADDR[6]                                ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.074      ; 0.848      ;
-; 0.603 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[1]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[1]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.071      ; 0.845      ;
-; 0.603 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[4]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[4]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.073      ; 0.847      ;
 ; 0.603 ; vga_controller:vga_ins|counter[55]                            ; vga_controller:vga_ins|counter[55]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.846      ;
 ; 0.603 ; vga_controller:vga_ins|counter[0]                             ; vga_controller:vga_ins|counter[0]                             ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.846      ;
 ; 0.603 ; vga_controller:vga_ins|counter[10]                            ; vga_controller:vga_ins|counter[10]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.846      ;
@@ -1419,6 +1417,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; 0.603 ; vga_controller:vga_ins|counter[46]                            ; vga_controller:vga_ins|counter[46]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.846      ;
 ; 0.603 ; vga_controller:vga_ins|counter[48]                            ; vga_controller:vga_ins|counter[48]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.846      ;
 ; 0.603 ; vga_controller:vga_ins|counter[57]                            ; vga_controller:vga_ins|counter[57]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.846      ;
+; 0.603 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[1]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|v_cnt[1]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.071      ; 0.845      ;
+; 0.603 ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[4]  ; vga_controller:vga_ins|video_sync_generator:LTM_ins|h_cnt[4]  ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.073      ; 0.847      ;
 ; 0.604 ; vga_controller:vga_ins|ADDR[4]                                ; vga_controller:vga_ins|ADDR[4]                                ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.074      ; 0.849      ;
 ; 0.604 ; vga_controller:vga_ins|counter[52]                            ; vga_controller:vga_ins|counter[52]                            ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.847      ;
 ; 0.604 ; vga_controller:vga_ins|counter[8]                             ; vga_controller:vga_ins|counter[8]                             ; p1|altpll_component|pll|clk[2] ; p1|altpll_component|pll|clk[2] ; 0.000        ; 0.072      ; 0.847      ;
@@ -4372,16 +4372,16 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime TimeQuest Timing Analyzer
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Dec 03 20:36:37 2019
+    Info: Processing started: Fri Dec 06 13:41:37 2019
 Info: Command: quartus_sta skeleton -c skeleton
 Info: qsta_default_script.tcl version: #3
-Warning (136023): Incompatible bus dimensions on node name "score[0]", expecting <= 0 dimension(s)  File: C:/Users/rt125/Documents/final-project-350/skeleton.v Line: 206
-Warning (136023): Incompatible bus dimensions on node name "score[1]", expecting <= 0 dimension(s)  File: C:/Users/rt125/Documents/final-project-350/skeleton.v Line: 206
-Warning (136023): Incompatible bus dimensions on node name "score[2]", expecting <= 0 dimension(s)  File: C:/Users/rt125/Documents/final-project-350/skeleton.v Line: 206
-Warning (136023): Incompatible bus dimensions on node name "score[3]", expecting <= 0 dimension(s)  File: C:/Users/rt125/Documents/final-project-350/skeleton.v Line: 206
-Warning (136023): Incompatible bus dimensions on node name "score[4]", expecting <= 0 dimension(s)  File: C:/Users/rt125/Documents/final-project-350/skeleton.v Line: 206
-Warning (136023): Incompatible bus dimensions on node name "score[5]", expecting <= 0 dimension(s)  File: C:/Users/rt125/Documents/final-project-350/skeleton.v Line: 206
-Warning (136023): Incompatible bus dimensions on node name "score[6]", expecting <= 0 dimension(s)  File: C:/Users/rt125/Documents/final-project-350/skeleton.v Line: 206
+Warning (136023): Incompatible bus dimensions on node name "score[0]", expecting <= 0 dimension(s)  File: C:/Users/rt125/demo/final-project-350/skeleton.v Line: 206
+Warning (136023): Incompatible bus dimensions on node name "score[1]", expecting <= 0 dimension(s)  File: C:/Users/rt125/demo/final-project-350/skeleton.v Line: 206
+Warning (136023): Incompatible bus dimensions on node name "score[2]", expecting <= 0 dimension(s)  File: C:/Users/rt125/demo/final-project-350/skeleton.v Line: 206
+Warning (136023): Incompatible bus dimensions on node name "score[3]", expecting <= 0 dimension(s)  File: C:/Users/rt125/demo/final-project-350/skeleton.v Line: 206
+Warning (136023): Incompatible bus dimensions on node name "score[4]", expecting <= 0 dimension(s)  File: C:/Users/rt125/demo/final-project-350/skeleton.v Line: 206
+Warning (136023): Incompatible bus dimensions on node name "score[5]", expecting <= 0 dimension(s)  File: C:/Users/rt125/demo/final-project-350/skeleton.v Line: 206
+Warning (136023): Incompatible bus dimensions on node name "score[6]", expecting <= 0 dimension(s)  File: C:/Users/rt125/demo/final-project-350/skeleton.v Line: 206
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (21077): Low junction temperature is 0 degrees C
@@ -4485,9 +4485,9 @@ Info (332146): Worst-case minimum pulse width slack is 9.377
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime TimeQuest Timing Analyzer was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 4938 megabytes
-    Info: Processing ended: Tue Dec 03 20:36:43 2019
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 4943 megabytes
+    Info: Processing ended: Fri Dec 06 13:41:44 2019
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 
 
